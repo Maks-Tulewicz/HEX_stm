@@ -1,0 +1,534 @@
+/*
+ * test_positions.c - Testowe pozycje + generator kroków + DEBUG
+ *
+ * WSZYSTKIE FUNKCJE TESTOWE TUTAJ!
+ * Pełna diagnostyka nóg, testowanie offsetów kostki, trajektorie kroków
+ */
+
+#include "test_positions.h"
+
+// Testowe pozycje dla nogi 1 - ZAKTUALIZOWANE (dalej od centrum)
+const TestPosition_t test_positions[] = {
+    {{20.0f, -12.0f, -24.0f}, "Pozycja stojaca - dalej"},
+    {{18.0f, -10.0f, -20.0f}, "Pozycja wyzsza"},
+    {{22.0f, -15.0f, -28.0f}, "Pozycja nizsza, dalej"},
+    {{20.0f, -12.0f, -15.0f}, "Noga wysoko podniesiona"},
+    {{20.0f, -12.0f, -30.0f}, "Noga bardzo nisko"},
+    {{25.0f, -12.0f, -24.0f}, "Krok do przodu"},
+    {{15.0f, -12.0f, -24.0f}, "Krok do tylu"},
+    {{20.0f, -8.0f, -24.0f}, "Krok w strone"},
+    {{30.0f, -18.0f, -35.0f}, "Maksymalny zasieg"},
+    {{10.0f, -6.0f, -15.0f}, "Minimalna odleglosc"}};
+
+const int num_test_positions = sizeof(test_positions) / sizeof(TestPosition_t);
+
+// Predefiniowane parametry kroków - ZAKTUALIZOWANE
+const StepParams_t default_step_params = {
+    .step_length = 4.0f,
+    .step_height = 3.0f,
+    .step_duration = 2.0f,
+    .base_pos = {20.0f, -12.0f, -24.0f}};
+
+const StepParams_t small_step_params = {
+    .step_length = 2.0f,
+    .step_height = 2.0f,
+    .step_duration = 1.5f,
+    .base_pos = {20.0f, -12.0f, -24.0f}};
+
+const StepParams_t large_step_params = {
+    .step_length = 6.0f,
+    .step_height = 4.0f,
+    .step_duration = 3.0f,
+    .base_pos = {20.0f, -12.0f, -24.0f}};
+
+// Funkcje pomocnicze
+float smoothStep(float x)
+{
+    if (x <= 0.0f)
+        return 0.0f;
+    if (x >= 1.0f)
+        return 1.0f;
+    return x * x * (3.0f - 2.0f * x);
+}
+
+float sinusoidalLift(float phase)
+{
+    if (phase <= 0.0f)
+        return 0.0f;
+    if (phase >= 1.0f)
+        return 0.0f;
+    return sinf(M_PI * phase);
+}
+
+// ========================================================================
+// FUNKCJE TESTOWANIA OFFSETU KOSTKI
+// ========================================================================
+
+// GŁÓWNA FUNKCJA: Test różnych offsetów kostki
+void testDifferentAnkleOffsets(PCA9685_Handle_t *pca, uint8_t leg_number)
+{
+    printf("\n"
+           "================================================================================\n"
+           "=== TEST RÓŻNYCH OFFSETÓW KOSTKI ===\n"
+           "================================================================================\n");
+
+    Position3D_t test_pos = {20.0f, 0.0f, -24.0f};
+    printf("Pozycja testowa: (%.1f, %.1f, %.1f)\n", test_pos.x, test_pos.y, test_pos.z);
+
+    JointAngles_t angles;
+    if (!computeLegIK(leg_number, test_pos, &angles))
+    {
+        printf("IK Failed!\n");
+        return;
+    }
+
+    float ankle_ik_deg = angles.ankle * 180.0f / M_PI;
+    printf("IK Ankle: %.1f°\n", ankle_ik_deg);
+    printf("Będę testować różne offsety i ustawiać tylko kostę.\n");
+    printf("Sprawdzaj po każdym: czy piszczel jest równoległa do uda?\n\n");
+
+    // Test różnych offsetów
+    float offsets[] = {-60.0f, -45.0f, -30.0f, -15.0f, 0.0f, 15.0f, 30.0f, 45.0f, 60.0f};
+    int num_offsets = sizeof(offsets) / sizeof(float);
+
+    uint8_t ankle_channel = (leg_number - 1) * 3 + 2; // Kanał kostki
+
+    for (int i = 0; i < num_offsets; i++)
+    {
+        float offset = offsets[i];
+        float servo_angle = 90.0f - ankle_ik_deg + offset;
+
+        printf("--- Test offset %.1f° ---\n", offset);
+        printf("Servo angle: 90° - %.1f° + %.1f° = %.1f°\n",
+               ankle_ik_deg, offset, servo_angle);
+
+        if (servo_angle >= 0.0f && servo_angle <= 180.0f)
+        {
+            PCA9685_SetServoAngle(pca, ankle_channel, servo_angle);
+            printf("✓ Ankle ustawione na %.1f°\n", servo_angle);
+            printf("SPRAWDŹ: Jak wygląda piszczel?\n");
+            printf("  - Równoległa do uda? Skierowana w dół? W górę?\n");
+        }
+        else
+        {
+            printf("✗ Servo %.1f° poza zakresem - pomijam\n", servo_angle);
+        }
+
+        printf("Czekam 4 sekundy...\n\n");
+        HAL_Delay(4000);
+    }
+
+    printf("================================================================================\n");
+    printf("KONIEC TESTU OFFSETÓW\n");
+    printf("================================================================================\n");
+    printf("KTÓRY OFFSET DAWAŁ NAJLEPSZĄ POZYCJĘ?\n");
+    printf("Powiedz mi numer (np. offset -30°) - wstawię go na stałe do kodu!\n");
+}
+
+// Funkcja do testowania offsetu kostki Z USTAWIENIEM SERW
+void testAnkleOffset(PCA9685_Handle_t *pca, uint8_t leg_number, Position3D_t test_position)
+{
+    printf("\n=== TEST OFFSETU KOSTKI ===\n");
+    printf("Noga: %d\n", leg_number);
+    printf("Pozycja testowa: (%.1f, %.1f, %.1f)\n",
+           test_position.x, test_position.y, test_position.z);
+
+    JointAngles_t angles;
+    if (computeLegIK(leg_number, test_position, &angles))
+    {
+        printf("\nKąty IK:\n");
+        printf("  Hip: %.1f°\n", angles.hip * 180.0f / M_PI);
+        printf("  Knee: %.1f°\n", angles.knee * 180.0f / M_PI);
+        printf("  Ankle: %.1f°\n", angles.ankle * 180.0f / M_PI);
+
+        printf("\nKonwersja na serwa:\n");
+        float servo_hip = convertToServoAngle(angles.hip, 0, leg_number);
+        float servo_knee = convertToServoAngle(angles.knee, 1, leg_number);
+        float servo_ankle = convertToServoAngle(angles.ankle, 2, leg_number);
+
+        printf("  Hip servo: %.1f°\n", servo_hip);
+        printf("  Knee servo: %.1f°\n", servo_knee);
+        printf("  Ankle servo: %.1f°\n", servo_ankle);
+
+        // USTAWIENIE SERW!
+        printf("\nUSTAWIAM SERWA...\n");
+        uint8_t base_channel = (leg_number - 1) * 3;
+
+        if (servo_hip >= 0.0f && servo_hip <= 180.0f)
+        {
+            PCA9685_SetServoAngle(pca, base_channel + 0, servo_hip);
+            printf("✓ Hip ustawione na %.1f°\n", servo_hip);
+        }
+
+        if (servo_knee >= 0.0f && servo_knee <= 180.0f)
+        {
+            PCA9685_SetServoAngle(pca, base_channel + 1, servo_knee);
+            printf("✓ Knee ustawione na %.1f°\n", servo_knee);
+        }
+
+        if (servo_ankle >= 0.0f && servo_ankle <= 180.0f)
+        {
+            PCA9685_SetServoAngle(pca, base_channel + 2, servo_ankle);
+            printf("✓ Ankle ustawione na %.1f°\n", servo_ankle);
+        }
+
+        printf("\nSERWA USTAWIONE! Sprawdź pozycję nogi.\n");
+    }
+    else
+    {
+        printf("IK Failed dla tej pozycji!\n");
+    }
+}
+
+// ========================================================================
+// FUNKCJE DIAGNOSTYCZNE
+// ========================================================================
+
+// Funkcja do sprawdzenia gdzie faktycznie jest noga przed krokiem
+void debugCurrentLegPosition(PCA9685_Handle_t *pca, uint8_t leg_number)
+{
+    printf("\n"
+           "================================================================================\n"
+           "=== DEBUG AKTUALNEJ POZYCJI NOGI %d ===\n"
+           "================================================================================\n",
+           leg_number);
+
+    printf("SPRAWDZANIE POZYCJI Z base_standing_positions[]\n");
+    printf("-----------------------------------------------------------------------\n");
+    if (leg_number <= 6)
+    {
+        Position3D_t base_from_array = base_standing_positions[leg_number - 1];
+        printf("Pozycja z tablicy: (%.2f, %.2f, %.2f)\n",
+               base_from_array.x, base_from_array.y, base_from_array.z);
+
+        float distance = sqrtf(base_from_array.x * base_from_array.x + base_from_array.y * base_from_array.y);
+        printf("Odległość od centrum robota: %.2fcm\n", distance);
+
+        if (isPositionReachable(leg_number, base_from_array))
+        {
+            JointAngles_t angles;
+            if (computeLegIK(leg_number, base_from_array, &angles))
+            {
+                printf("✓ IK działa dla pozycji z tablicy\n");
+                printf("  Kąty: hip=%.1f°, knee=%.1f°, ankle=%.1f°\n",
+                       angles.hip * 180.0f / M_PI,
+                       angles.knee * 180.0f / M_PI,
+                       angles.ankle * 180.0f / M_PI);
+            }
+            else
+            {
+                printf("✗ IK FAILED dla pozycji z tablicy!\n");
+            }
+        }
+        else
+        {
+            printf("✗ Pozycja z tablicy POZA ZASIĘGIEM!\n");
+        }
+    }
+}
+
+// Funkcja do sprawdzenia czy problem jest w offset'ach serw
+void checkServoOffsets(PCA9685_Handle_t *pca, uint8_t leg_number)
+{
+    printf("\n"
+           "================================================================================\n"
+           "=== SPRAWDZENIE SERW I KANAŁÓW NOGI %d ===\n"
+           "================================================================================\n",
+           leg_number);
+
+    uint8_t base_channel = (leg_number - 1) * 3;
+
+    printf("INFORMACJE O KANAŁACH:\n");
+    printf("-----------------------------------------------------------------------\n");
+    printf("Noga %d używa kanałów: %d (hip), %d (knee), %d (ankle)\n",
+           leg_number, base_channel, base_channel + 1, base_channel + 2);
+
+    if (!pca->ready)
+    {
+        printf("✗ PCA9685 NIE JEST GOTOWY! Sprawdź inicjalizację.\n");
+        return;
+    }
+
+    printf("\nTest pozycji neutralnych (90°)\n");
+    printf("-----------------------------------------------------------------------\n");
+    printf("Ustawiam wszystkie serwa nogi %d na 90°...\n", leg_number);
+
+    PCA9685_SetServoAngle(pca, base_channel + 0, 90.0f); // Hip
+    PCA9685_SetServoAngle(pca, base_channel + 1, 90.0f); // Knee
+    PCA9685_SetServoAngle(pca, base_channel + 2, 90.0f); // Ankle
+
+    printf("✓ Serwa ustawione na 90° - SPRAWDŹ CZY NOGA SICH PORUSZYŁA!\n");
+    printf("Czekam 5 sekund...\n");
+    HAL_Delay(5000);
+
+    // Test zakresu ruchu
+    printf("\nTest zakresu ruchu każdego serwa\n");
+    printf("-----------------------------------------------------------------------\n");
+
+    // Test hip
+    printf("Test HIP (kanał %d):\n", base_channel);
+    PCA9685_SetServoAngle(pca, base_channel + 0, 45.0f);
+    printf("  45° - sprawdź ruch\n");
+    HAL_Delay(2000);
+    PCA9685_SetServoAngle(pca, base_channel + 0, 135.0f);
+    printf("  135° - sprawdź ruch\n");
+    HAL_Delay(2000);
+    PCA9685_SetServoAngle(pca, base_channel + 0, 90.0f);
+    printf("  90° - powrót\n");
+    HAL_Delay(1500);
+
+    // Test knee
+    printf("\nTest KNEE (kanał %d):\n", base_channel + 1);
+    PCA9685_SetServoAngle(pca, base_channel + 1, 45.0f);
+    printf("  45° - sprawdź ruch\n");
+    HAL_Delay(2000);
+    PCA9685_SetServoAngle(pca, base_channel + 1, 135.0f);
+    printf("  135° - sprawdź ruch\n");
+    HAL_Delay(2000);
+    PCA9685_SetServoAngle(pca, base_channel + 1, 90.0f);
+    printf("  90° - powrót\n");
+    HAL_Delay(1500);
+
+    // Test ankle
+    printf("\nTest ANKLE (kanał %d):\n", base_channel + 2);
+    PCA9685_SetServoAngle(pca, base_channel + 2, 45.0f);
+    printf("  45° - sprawdź ruch\n");
+    HAL_Delay(2000);
+    PCA9685_SetServoAngle(pca, base_channel + 2, 135.0f);
+    printf("  135° - sprawdź ruch\n");
+    HAL_Delay(2000);
+    PCA9685_SetServoAngle(pca, base_channel + 2, 90.0f);
+    printf("  90° - powrót\n");
+    HAL_Delay(1500);
+
+    printf("\n✓ Test serw zakończony.\n");
+}
+
+// Funkcja do znalezienia dobrej pozycji bazowej
+void findGoodBasePosition(PCA9685_Handle_t *pca, uint8_t leg_number)
+{
+    printf("\n"
+           "================================================================================\n"
+           "=== SZUKANIE NAJLEPSZEJ POZYCJI BAZOWEJ ===\n"
+           "================================================================================\n");
+
+    printf("Test pozycji dla nogi %d:\n\n", leg_number);
+
+    // Test różnych pozycji X (odległość od centrum)
+    for (float x = 15.0f; x <= 25.0f; x += 2.0f)
+    {
+        Position3D_t test_pos = {x, 0.0f, -24.0f};
+
+        printf("-----------------------------------------------------------------------\n");
+        printf("TEST POZYCJI: (%.1f, 0, -24) - odległość %.1fcm\n", x, x);
+
+        if (isPositionReachable(leg_number, test_pos))
+        {
+            JointAngles_t angles;
+            if (computeLegIK(leg_number, test_pos, &angles))
+            {
+                float servo_hip = convertToServoAngle(angles.hip, 0, leg_number);
+                float servo_knee = convertToServoAngle(angles.knee, 1, leg_number);
+                float servo_ankle = convertToServoAngle(angles.ankle, 2, leg_number);
+
+                printf("✓ POZYCJA OK!\n");
+                printf("  Kąty IK: hip=%.1f°, knee=%.1f°, ankle=%.1f°\n",
+                       angles.hip * 180.0f / M_PI,
+                       angles.knee * 180.0f / M_PI,
+                       angles.ankle * 180.0f / M_PI);
+                printf("  Serwa: hip=%.1f°, knee=%.1f°, ankle=%.1f°\n",
+                       servo_hip, servo_knee, servo_ankle);
+
+                // Ustaw i sprawdź
+                uint8_t base_channel = (leg_number - 1) * 3;
+                PCA9685_SetServoAngle(pca, base_channel + 0, servo_hip);
+                PCA9685_SetServoAngle(pca, base_channel + 1, servo_knee);
+                PCA9685_SetServoAngle(pca, base_channel + 2, servo_ankle);
+
+                printf("  Pozycja ustawiona - SPRAWDŹ jak wygląda noga!\n");
+                printf("  Czy końcówka stopy jest w odległości %.1fcm od centrum?\n", x);
+                printf("  Czekam 3 sekundy...\n");
+                HAL_Delay(3000);
+            }
+            else
+            {
+                printf("✗ IK FAILED dla tej pozycji\n");
+            }
+        }
+        else
+        {
+            printf("✗ POZYCJA POZA ZASIĘGIEM\n");
+        }
+    }
+
+    printf("\n=== KONIEC SZUKANIA POZYCJI ===\n");
+    printf("Która pozycja wyglądała najlepiej?\n");
+}
+
+// GŁÓWNA FUNKCJA DIAGNOSTYCZNA
+void fullLegDiagnostics(PCA9685_Handle_t *pca, uint8_t leg_number)
+{
+    printf("\n"
+           "################################################################################\n"
+           "###                    PEŁNA DIAGNOSTYKA NOGI %d                            ###\n"
+           "################################################################################\n",
+           leg_number);
+
+    printf("\nUruchamiam kompletną diagnostykę...\n");
+    printf("Sprawdzę:\n");
+    printf("1. Pozycje bazowe i IK\n");
+    printf("2. Działanie serw i kanałów\n");
+    printf("3. Optymalne pozycje bazowe\n");
+    printf("\nCzekam 3 sekundy przed rozpoczęciem...\n");
+    HAL_Delay(3000);
+
+    // KROK 1: Debug pozycji
+    debugCurrentLegPosition(pca, leg_number);
+
+    printf("\n\nKROK 1 ZAKOŃCZONY. Czekam 5 sekund przed kolejnym...\n");
+    HAL_Delay(5000);
+
+    // KROK 2: Debug serw
+    checkServoOffsets(pca, leg_number);
+
+    printf("\n\nKROK 2 ZAKOŃCZONY. Czekam 5 sekund przed kolejnym...\n");
+    HAL_Delay(5000);
+
+    // KROK 3: Szukanie dobrej pozycji
+    findGoodBasePosition(pca, leg_number);
+
+    printf("\n\n"
+           "################################################################################\n"
+           "###                      DIAGNOSTYKA ZAKOŃCZONA                             ###\n"
+           "################################################################################\n");
+
+    printf("\nPODSUMOWANIE:\n");
+    printf("1. Sprawdź logi powyżej i znajdź:\n");
+    printf("   - Która pozycja bazowa działała najlepiej?\n");
+    printf("   - Czy wszystkie serwa się poruszały?\n");
+    printf("   - Czy kąty IK są rozsądne?\n");
+    printf("2. Jeśli wszystko OK, użyj testDifferentAnkleOffsets() do znalezienia offsetu kostki\n");
+    printf("\nDiagnostyka będzie się powtarzać co 30 sekund...\n");
+}
+
+// ========================================================================
+// POZOSTAŁE FUNKCJE TESTOWE - UPROSZCZONE
+// ========================================================================
+
+// Główne funkcje testowe
+void testLeg3StepLoop(PCA9685_Handle_t *pca)
+{
+    printf("\n=== PRZEKIEROWANIE NA DIAGNOSTYKĘ ===\n");
+    printf("Użyj fullLegDiagnostics() lub testDifferentAnkleOffsets()\n");
+    fullLegDiagnostics(pca, 3);
+}
+
+void testLeg3StepLoopAdvanced(PCA9685_Handle_t *pca, StepMode_t mode)
+{
+    printf("\n=== TEST KROKU - TRYB ZAAWANSOWANY ===\n");
+    fullLegDiagnostics(pca, 3);
+}
+
+// Funkcje testowania pozycji
+void testAllPositions(PCA9685_Handle_t *pca)
+{
+    printf("\n=== TEST WSZYSTKICH POZYCJI ===\n");
+    fullLegDiagnostics(pca, 1);
+}
+
+void testSinglePosition(PCA9685_Handle_t *pca, Position3D_t pos, const char *description)
+{
+    printf("\n=== TEST POJEDYNCZEJ POZYCJI: %s ===\n", description);
+    printf("Pozycja: (%.1f, %.1f, %.1f)\n", pos.x, pos.y, pos.z);
+
+    JointAngles_t angles;
+    if (isPositionReachable(1, pos) && computeLegIK(1, pos, &angles))
+    {
+        printf("✓ Pozycja OK\n");
+
+        float servo_hip = convertToServoAngle(angles.hip, 0, 1);
+        float servo_knee = convertToServoAngle(angles.knee, 1, 1);
+        float servo_ankle = convertToServoAngle(angles.ankle, 2, 1);
+
+        PCA9685_SetServoAngle(pca, 0, servo_hip);
+        PCA9685_SetServoAngle(pca, 1, servo_knee);
+        PCA9685_SetServoAngle(pca, 2, servo_ankle);
+
+        printf("Serwa: hip=%.1f°, knee=%.1f°, ankle=%.1f°\n",
+               servo_hip, servo_knee, servo_ankle);
+    }
+    else
+    {
+        printf("✗ Pozycja poza zasięgiem lub IK failed\n");
+    }
+}
+
+void demonstrateMovement(PCA9685_Handle_t *pca)
+{
+    printf("\n=== DEMONSTRACJA RUCHU ===\n");
+
+    Position3D_t start = {18.0f, -10.0f, -20.0f};
+    Position3D_t end = {22.0f, -15.0f, -28.0f};
+    const int steps = 20;
+
+    for (int step = 0; step <= steps; step++)
+    {
+        float t = (float)step / steps;
+        Position3D_t current = {
+            start.x + t * (end.x - start.x),
+            start.y + t * (end.y - start.y),
+            start.z + t * (end.z - start.z)};
+
+        JointAngles_t angles;
+        if (computeLegIK(1, current, &angles))
+        {
+            float servo_hip = convertToServoAngle(angles.hip, 0, 1);
+            float servo_knee = convertToServoAngle(angles.knee, 1, 1);
+            float servo_ankle = convertToServoAngle(angles.ankle, 2, 1);
+
+            PCA9685_SetServoAngle(pca, 0, servo_hip);
+            PCA9685_SetServoAngle(pca, 1, servo_knee);
+            PCA9685_SetServoAngle(pca, 2, servo_ankle);
+
+            printf("Krok %d/%d: pos(%.1f,%.1f,%.1f)\n", step, steps, current.x, current.y, current.z);
+            HAL_Delay(200);
+        }
+    }
+}
+
+// Pozostałe funkcje - przekierowanie na diagnostykę
+void testSingleStepLoop(PCA9685_Handle_t *pca, uint8_t leg_number)
+{
+    fullLegDiagnostics(pca, leg_number);
+}
+
+void executeForwardStep(PCA9685_Handle_t *pca, uint8_t leg_number, float step_length, float step_height)
+{
+    printf("\n=== POJEDYNCZY KROK - UŻYJ DIAGNOSTYKI ===\n");
+    fullLegDiagnostics(pca, leg_number);
+}
+
+void executeBackwardStep(PCA9685_Handle_t *pca, uint8_t leg_number, float step_length, float step_height)
+{
+    executeForwardStep(pca, leg_number, step_length, step_height);
+}
+
+void demonstrateSteps(PCA9685_Handle_t *pca, uint8_t leg_number)
+{
+    fullLegDiagnostics(pca, leg_number);
+}
+
+void executeWalkingSequence(PCA9685_Handle_t *pca, uint8_t leg_number, int num_steps)
+{
+    fullLegDiagnostics(pca, leg_number);
+}
+
+void testStepParameters(PCA9685_Handle_t *pca, uint8_t leg_number)
+{
+    fullLegDiagnostics(pca, leg_number);
+}
+
+void testCloserPositions(PCA9685_Handle_t *pca, uint8_t leg_number)
+{
+    fullLegDiagnostics(pca, leg_number);
+}

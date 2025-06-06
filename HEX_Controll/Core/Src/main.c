@@ -19,12 +19,18 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "i2c.h"
+#include "usart.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
 #include "pca9685.h"
+#include "hexapod_kinematics.h"
+#include "test_positions.h"
+#include "step_functions.h"
+#include <stdio.h>
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -45,6 +51,8 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+
+PCA9685_Handle_t pca1;
 
 /* USER CODE END PV */
 
@@ -90,33 +98,15 @@ int main(void)
   MX_GPIO_Init();
   MX_I2C1_Init();
   MX_I2C2_Init();
+  MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
-  // Test czy PCA9685 odpowiada
-  HAL_StatusTypeDef i2c_status = HAL_I2C_IsDeviceReady(&hi2c1, 0x80, 3, 1000);
-  if (i2c_status != HAL_OK)
+  if (!PCA9685_Init(&pca1, &hi2c1, PCA9685_ADDRESS_1))
   {
-    // I2C problem - szybkie miganie
     while (1)
     {
-      HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
-      HAL_Delay(100);
-      HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
-      HAL_Delay(100);
-    }
-  }
-
-  // Inicjalizacja z sprawdzaniem
-  PCA9685_STATUS status = PCA9685_Init(&hi2c1);
-  if (status != PCA9685_OK)
-  {
-    // Init problem - średnie miganie
-    while (1)
-    {
-      HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
-      HAL_Delay(300);
-      HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
-      HAL_Delay(300);
+      HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5); // Toggle LED to indicate error
+      HAL_Delay(50);
     }
   }
 
@@ -127,17 +117,15 @@ int main(void)
   while (1)
   {
 
-    PCA9685_STATUS servo_status = PCA9685_SetServoAngle(0, 90);
-    if (servo_status != PCA9685_OK)
+    while (1)
     {
-      // Servo problem - długie miganie
-      while (1)
-      {
-        HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
-        HAL_Delay(1000);
-        HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
-        HAL_Delay(1000);
-      }
+
+      // W main loop:
+      printf("=== TEST KROKÓW NOGI 3 ===\n");
+
+      // Test z domyślnymi parametrami
+      testDefaultStep(&pca1, 3);
+      HAL_Delay(2000); // Czekaj 2 sekundy między testami
     }
 
     /* USER CODE END WHILE */
@@ -201,6 +189,12 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
+
+int _write(int file, char *ptr, int len)
+{
+  HAL_UART_Transmit(&huart2, (uint8_t *)ptr, len, HAL_MAX_DELAY);
+  return len;
+}
 
 /* USER CODE END 4 */
 

@@ -1,0 +1,289 @@
+/*
+ * hexapod_kinematics.c - Kinematyka odwrotna dla hexapoda
+ *
+ * TYLKO FUNKCJE KINEMATYKI - bez testów!
+ * Offset kostki: -45° (do dostrojenia po testach)
+ */
+
+#include "hexapod_kinematics.h"
+#include <math.h>
+
+// Wymiary nóg hexapoda [cm]
+const float L1 = 5.8f;  // Hip do knee
+const float L2 = 10.5f; // Knee do ankle
+const float L3 = 20.5f; // Ankle do końca stopy
+
+// Pozycje bazowe dla wszystkich 6 nóg - ZAKTUALIZOWANE (dalej od centrum)
+const Position3D_t base_standing_positions[6] = {
+    {20.0f, -12.0f, -24.0f}, // Noga 1 - prawy przód
+    {20.0f, 12.0f, -24.0f},  // Noga 2 - lewy przód
+    {22.0f, 0.0f, -24.0f},   // Noga 3 - prawy środek
+    {22.0f, 0.0f, -24.0f},   // Noga 4 - lewy środek
+    {20.0f, -12.0f, -24.0f}, // Noga 5 - prawy tył
+    {20.0f, 12.0f, -24.0f}   // Noga 6 - lewy tył
+};
+
+// Sprawdzenie czy pozycja jest w zasięgu nogi
+bool isPositionReachable(uint8_t leg_number, Position3D_t position)
+{
+    if (leg_number < 1 || leg_number > 6)
+    {
+        return false;
+    }
+
+    // Sprawdź odległość 2D od hip joint
+    float distance_2d = sqrtf(position.x * position.x + position.y * position.y);
+
+    // Maksymalna odległość gdy noga jest całkowicie wyprostowana
+    float max_reach = L1 + L2 + L3; // ~36.8cm
+
+    // Minimalna odległość gdy noga jest całkowicie zgięta
+    float min_reach = fabs(L3 - L2 - L1); // ~4.2cm
+
+    // Sprawdź zasięg w płaszczyźnie XY
+    if (distance_2d > max_reach || distance_2d < min_reach)
+    {
+        return false;
+    }
+
+    // Sprawdź zasięg w Z (wysokość)
+    if (position.z > 0.0f || position.z < -max_reach)
+    {
+        return false;
+    }
+
+    return true;
+}
+
+// Główna funkcja kinematyki odwrotnej
+bool computeLegIK(uint8_t leg_number, Position3D_t target_position, JointAngles_t *angles)
+{
+    if (leg_number < 1 || leg_number > 6 || angles == NULL)
+    {
+        return false;
+    }
+
+    // Sprawdź czy pozycja jest w zasięgu
+    if (!isPositionReachable(leg_number, target_position))
+    {
+        return false;
+    }
+
+    float x = target_position.x;
+    float y = target_position.y;
+    float z = target_position.z;
+
+    // 1. Oblicz kąt hip (obrót w płaszczyźnie XY)
+    float hip_angle = atan2f(y, x);
+
+    // 2. Oblicz odległość od hip do target w płaszczyźnie XY
+    float r_xy = sqrtf(x * x + y * y);
+
+    // 3. Odejmij długość L1 (hip do knee)
+    float r_effective = r_xy - L1;
+    if (r_effective < 0)
+    {
+        return false; // Za blisko dla L1
+    }
+
+    // 4. Oblicz odległość 3D od knee do target
+    float r_3d = sqrtf(r_effective * r_effective + z * z);
+
+    // 5. Sprawdź czy knee-ankle-foot może dosięgnąć target
+    if (r_3d > (L2 + L3) || r_3d < fabs(L2 - L3))
+    {
+        return false;
+    }
+
+    // 6. Oblicz kąt knee używając prawa cosinusów
+    float cos_knee = (L2 * L2 + L3 * L3 - r_3d * r_3d) / (2 * L2 * L3);
+    if (cos_knee > 1.0f)
+        cos_knee = 1.0f;
+    if (cos_knee < -1.0f)
+        cos_knee = -1.0f;
+
+    float knee_angle = M_PI - acosf(cos_knee); // Kąt wewnętrzny
+
+    // 7. Oblicz kąt ankle
+    float cos_ankle = (L2 * L2 + r_3d * r_3d - L3 * L3) / (2 * L2 * r_3d);
+    if (cos_ankle > 1.0f)
+        cos_ankle = 1.0f;
+    if (cos_ankle < -1.0f)
+        cos_ankle = -1.0f;
+
+    float ankle_base_angle = acosf(cos_ankle);
+    float ankle_z_angle = atan2f(-z, r_effective);
+
+    float ankle_angle = ankle_base_angle + ankle_z_angle;
+
+    // 8. Zapisz wyniki
+    angles->hip = hip_angle;
+    angles->knee = knee_angle;
+    angles->ankle = ankle_angle;
+
+    return true;
+}
+
+// Konwersja kąta IK na kąt serwa z OFFSETEM KOSTKI
+float convertToServoAngle(float joint_angle_rad, uint8_t joint_type, uint8_t leg_number)
+{
+    // Konwersja radiany -> stopnie
+    float angle_deg = joint_angle_rad * 180.0f / M_PI;
+
+    float servo_angle;
+
+    switch (joint_type)
+    {
+    case 0: // Hip
+        servo_angle = 90.0f + angle_deg;
+        break;
+
+    case 1: // Knee
+        servo_angle = 90.0f - angle_deg;
+        break;
+
+    case 2:                                      // Ankle - Z OFFSETEM (do dostrojenia)
+        servo_angle = 90.0f - angle_deg - 45.0f; // OFFSET -45° (tymczasowy)
+        break;
+
+    default:
+        servo_angle = 90.0f;
+        break;
+    }
+
+    // Dodatkowe offsety dla różnych nóg (jeśli potrzebne)
+    switch (leg_number)
+    {
+    case 1: // Noga 1 - prawy przód
+        // Bez dodatkowych offsetów
+        break;
+
+    case 2: // Noga 2 - lewy przód
+        if (joint_type == 0)
+            servo_angle = 180.0f - servo_angle; // Lustrzane odbicie
+        break;
+
+    case 3: // Noga 3 - prawy środek
+        // Bez dodatkowych offsetów
+        break;
+
+    case 4: // Noga 4 - lewy środek
+        if (joint_type == 0)
+            servo_angle = 180.0f - servo_angle; // Lustrzane odbicie
+        break;
+
+    case 5: // Noga 5 - prawy tył
+        // Bez dodatkowych offsetów
+        break;
+
+    case 6: // Noga 6 - lewy tył
+        if (joint_type == 0)
+            servo_angle = 180.0f - servo_angle; // Lustrzane odbicie
+        break;
+
+    default:
+        break;
+    }
+
+    // Ograniczenia serwa
+    if (servo_angle < 0.0f)
+    {
+        servo_angle = 0.0f;
+    }
+    if (servo_angle > 180.0f)
+    {
+        servo_angle = 180.0f;
+    }
+
+    return servo_angle;
+}
+
+// Funkcja debugowania IK
+void debugLegIK(uint8_t leg_number, Position3D_t position, JointAngles_t angles)
+{
+    printf("\n=== DEBUG IK NOGI %d ===\n", leg_number);
+    printf("Target pozycja: (%.2f, %.2f, %.2f)\n",
+           position.x, position.y, position.z);
+
+    printf("Obliczone kąty IK:\n");
+    printf("  Hip:   %.2f° (%.4f rad)\n", angles.hip * 180.0f / M_PI, angles.hip);
+    printf("  Knee:  %.2f° (%.4f rad)\n", angles.knee * 180.0f / M_PI, angles.knee);
+    printf("  Ankle: %.2f° (%.4f rad)\n", angles.ankle * 180.0f / M_PI, angles.ankle);
+
+    printf("Kąty serw:\n");
+    float servo_hip = convertToServoAngle(angles.hip, 0, leg_number);
+    float servo_knee = convertToServoAngle(angles.knee, 1, leg_number);
+    float servo_ankle = convertToServoAngle(angles.ankle, 2, leg_number);
+
+    printf("  Hip servo:   %.2f°\n", servo_hip);
+    printf("  Knee servo:  %.2f°\n", servo_knee);
+    printf("  Ankle servo: %.2f°\n", servo_ankle);
+
+    // Sprawdzenie zasięgów
+    float distance_2d = sqrtf(position.x * position.x + position.y * position.y);
+    float max_reach = L1 + L2 + L3;
+
+    printf("Analiza zasięgu:\n");
+    printf("  Odległość 2D: %.2fcm (max: %.2fcm)\n", distance_2d, max_reach);
+    printf("  Wysokość Z: %.2fcm\n", position.z);
+    printf("  Wykorzystanie zasięgu: %.1f%%\n", (distance_2d / max_reach) * 100.0f);
+
+    printf("=== KONIEC DEBUG IK ===\n\n");
+}
+
+// Forward kinematics - oblicza pozycję na podstawie kątów (opcjonalne)
+Position3D_t computeForwardKinematics(uint8_t leg_number, JointAngles_t angles)
+{
+    Position3D_t position = {0, 0, 0};
+
+    float hip = angles.hip;
+    float knee = angles.knee;
+    float ankle = angles.ankle;
+
+    // Oblicz pozycję końcówki stopy
+    float x1 = L1 * cosf(hip);
+    float y1 = L1 * sinf(hip);
+
+    float x2 = x1 + L2 * cosf(hip) * cosf(knee);
+    float y2 = y1 + L2 * sinf(hip) * cosf(knee);
+    float z2 = -L2 * sinf(knee);
+
+    position.x = x2 + L3 * cosf(hip) * cosf(knee + ankle);
+    position.y = y2 + L3 * sinf(hip) * cosf(knee + ankle);
+    position.z = z2 - L3 * sinf(knee + ankle);
+
+    return position;
+}
+
+// Test wszystkich pozycji bazowych
+void testAllBasePositions(void)
+{
+    printf("\n=== TEST WSZYSTKICH POZYCJI BAZOWYCH ===\n");
+
+    for (int leg = 1; leg <= 6; leg++)
+    {
+        Position3D_t base_pos = base_standing_positions[leg - 1];
+        printf("\nNoga %d: (%.1f, %.1f, %.1f)\n",
+               leg, base_pos.x, base_pos.y, base_pos.z);
+
+        if (isPositionReachable(leg, base_pos))
+        {
+            JointAngles_t angles;
+            if (computeLegIK(leg, base_pos, &angles))
+            {
+                printf("  ✓ IK OK - Hip: %.1f°, Knee: %.1f°, Ankle: %.1f°\n",
+                       angles.hip * 180.0f / M_PI,
+                       angles.knee * 180.0f / M_PI,
+                       angles.ankle * 180.0f / M_PI);
+            }
+            else
+            {
+                printf("  ✗ IK Failed\n");
+            }
+        }
+        else
+        {
+            printf("  ✗ Poza zasięgiem\n");
+        }
+    }
+}

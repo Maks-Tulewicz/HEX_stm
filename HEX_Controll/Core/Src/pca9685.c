@@ -1,196 +1,192 @@
 /*
- * pca9685.c
+ * pca9685.c - PCA9685 PWM Driver for STM32 HAL
  *
- *  Created on: 20.01.2019
- *      Author: Mateusz Salamon
- *		mateusz@msalamon.pl
+ * Created for Hexapod project - optimized for MG996R servos
+ * Based on proven working I2C commands - no software reset
  *
- *      Website: https://msalamon.pl/nigdy-wiecej-multipleksowania-na-gpio!-max7219-w-akcji-cz-3/
- *      GitHub:  https://github.com/lamik/Servos_PWM_STM32_HAL
+ * Author: Hexapod Project
+ * Date: 2025
  */
 
-#include "main.h"
-#include "i2c.h"
-
 #include "pca9685.h"
-#include "math.h"
 
-I2C_HandleTypeDef *pca9685_i2c;
-
-PCA9685_STATUS PCA9685_SetBit(uint8_t Register, uint8_t Bit, uint8_t Value)
+/**
+ * @brief Initialize PCA9685 controller (NO SOFTWARE RESET)
+ *
+ * This function uses the EXACT working sequence from manual testing:
+ * 1. Test I2C communication
+ * 2. Set MODE1 register to 0x20 (auto-increment enabled)
+ * 3. Configure 50Hz frequency (prescaler = 121)
+ * 4. No software reset to avoid instability
+ */
+bool PCA9685_Init(PCA9685_Handle_t *handle, I2C_HandleTypeDef *hi2c, uint8_t address)
 {
-	uint8_t tmp;
-	if (Value)
-		Value = 1;
-
-	if (HAL_OK != HAL_I2C_Mem_Read(pca9685_i2c, PCA9685_ADDRESS, Register, 1, &tmp, 1, 10))
+	// Validate input parameters
+	if (handle == NULL || hi2c == NULL)
 	{
-		return PCA9685_ERROR;
-	}
-	tmp &= ~((1 << PCA9685_MODE1_RESTART_BIT) | (1 << Bit));
-	tmp |= (Value & 1) << Bit;
-
-	if (HAL_OK != HAL_I2C_Mem_Write(pca9685_i2c, PCA9685_ADDRESS, Register, 1, &tmp, 1, 10))
-	{
-		return PCA9685_ERROR;
+		return false;
 	}
 
-	return PCA9685_OK;
-}
+	// Initialize handle structure
+	handle->hi2c = hi2c;
+	handle->address = address;
+	handle->ready = false;
 
-PCA9685_STATUS PCA9685_SoftwareReset(void)
-{
-	uint8_t cmd = 0x6;
-	if (HAL_OK == HAL_I2C_Master_Transmit(pca9685_i2c, 0x00, &cmd, 1, 10))
+	// Test I2C communication first
+	if (HAL_I2C_IsDeviceReady(hi2c, address << 1, 3, 1000) != HAL_OK)
 	{
-		return PCA9685_OK;
-	}
-	return PCA9685_ERROR;
-}
-
-PCA9685_STATUS PCA9685_SleepMode(uint8_t Enable)
-{
-	return PCA9685_SetBit(PCA9685_MODE1, PCA9685_MODE1_SLEEP_BIT, Enable);
-}
-
-PCA9685_STATUS PCA9685_RestartMode(uint8_t Enable)
-{
-	return PCA9685_SetBit(PCA9685_MODE1, PCA9685_MODE1_RESTART_BIT, Enable);
-}
-
-PCA9685_STATUS PCA9685_AutoIncrement(uint8_t Enable)
-{
-	return PCA9685_SetBit(PCA9685_MODE1, PCA9685_MODE1_AI_BIT, Enable);
-}
-
-PCA9685_STATUS PCA9685_SubaddressRespond(SubaddressBit Subaddress, uint8_t Enable)
-{
-	return PCA9685_SetBit(PCA9685_MODE1, Subaddress, Enable);
-}
-
-PCA9685_STATUS PCA9685_AllCallRespond(uint8_t Enable)
-{
-	return PCA9685_SetBit(PCA9685_MODE1, PCA9685_MODE1_ALCALL_BIT, Enable);
-}
-
-//
-//	Frequency - Hz value
-//
-PCA9685_STATUS PCA9685_SetPwmFrequency(uint16_t Frequency)
-{
-	float PrescalerVal;
-	uint8_t Prescale;
-
-	if (Frequency >= 1526)
-	{
-		Prescale = 0x03;
-	}
-	else if (Frequency <= 24)
-	{
-		Prescale = 0xFF;
-	}
-	else
-	{
-		PrescalerVal = (25000000 / (4096.0 * (float)Frequency)) - 1;
-		Prescale = floor(PrescalerVal + 0.5);
+		return false;
 	}
 
-	//
-	//	To change the frequency, PCA9685 have to be in Sleep mode.
-	//
-	PCA9685_SleepMode(1);
-	HAL_I2C_Mem_Write(pca9685_i2c, PCA9685_ADDRESS, PCA9685_PRESCALE, 1, &Prescale, 1, 10); // Write Prescale value
-	PCA9685_SleepMode(0);
-	PCA9685_RestartMode(1);
-	return PCA9685_OK;
-}
-
-PCA9685_STATUS PCA9685_SetPwm(uint8_t Channel, uint16_t OnTime, uint16_t OffTime)
-{
-	uint8_t RegisterAddress;
-	uint8_t Message[4];
-
-	RegisterAddress = PCA9685_LED0_ON_L + (4 * Channel);
-	Message[0] = OnTime & 0xFF;
-	Message[1] = OnTime >> 8;
-	Message[2] = OffTime & 0xFF;
-	Message[3] = OffTime >> 8;
-
-	if (HAL_OK != HAL_I2C_Mem_Write(pca9685_i2c, PCA9685_ADDRESS, RegisterAddress, 1, Message, 4, 10))
+	// Step 1: Set normal mode with auto-increment (WORKING VALUE: 0x20)
+	uint8_t mode1_data = 0x20; // Auto-increment enabled (bit 5)
+	if (HAL_I2C_Mem_Write(hi2c, address << 1, PCA9685_MODE1, 1, &mode1_data, 1, 1000) != HAL_OK)
 	{
-		return PCA9685_ERROR;
+		return false;
 	}
 
-	return PCA9685_OK;
-}
+	// Step 2: Set frequency to 50Hz (WORKING PRESCALER: 121)
+	// Formula: prescaler = round(25MHz/(4096*50Hz)) - 1 = 121
+	uint8_t prescaler = 121;
 
-PCA9685_STATUS PCA9685_SetPin(uint8_t Channel, uint16_t Value, uint8_t Invert)
-{
-	if (Value > 4095)
-		Value = 4095;
-
-	if (Invert)
+	// Enter sleep mode to change prescaler
+	uint8_t sleep_mode = 0x10; // Sleep bit set (bit 4)
+	if (HAL_I2C_Mem_Write(hi2c, address << 1, PCA9685_MODE1, 1, &sleep_mode, 1, 1000) != HAL_OK)
 	{
-		if (Value == 0)
-		{
-			// Special value for signal fully on.
-			return PCA9685_SetPwm(Channel, 4096, 0);
-		}
-		else if (Value == 4095)
-		{
-			// Special value for signal fully off.
-			return PCA9685_SetPwm(Channel, 0, 4096);
-		}
-		else
-		{
-			return PCA9685_SetPwm(Channel, 0, 4095 - Value);
-		}
+		return false;
 	}
-	else
+
+	// Write prescaler register
+	if (HAL_I2C_Mem_Write(hi2c, address << 1, PCA9685_PRESCALE, 1, &prescaler, 1, 1000) != HAL_OK)
 	{
-		if (Value == 4095)
-		{
-			// Special value for signal fully on.
-			return PCA9685_SetPwm(Channel, 4096, 0);
-		}
-		else if (Value == 0)
-		{
-			// Special value for signal fully off.
-			return PCA9685_SetPwm(Channel, 0, 4096);
-		}
-		else
-		{
-			return PCA9685_SetPwm(Channel, 0, Value);
-		}
+		return false;
 	}
+
+	// Exit sleep mode (restore normal mode)
+	if (HAL_I2C_Mem_Write(hi2c, address << 1, PCA9685_MODE1, 1, &mode1_data, 1, 1000) != HAL_OK)
+	{
+		return false;
+	}
+
+	// Small delay for oscillator to stabilize
+	HAL_Delay(5);
+
+	handle->ready = true;
+	return true;
 }
 
-#ifdef PCA9685_SERVO_MODE
-PCA9685_STATUS PCA9685_SetServoAngle(uint8_t Channel, float Angle)
+/**
+ * @brief Set servo angle with EXTENDED PWM range for full 180°
+ *
+ * Testing wider PWM range for MG996R's full 180° rotation:
+ * - 0°   -> SERVO_PWM_MIN (100) - extended minimum
+ * - 90°  -> SERVO_PWM_MID (375) - tested working center
+ * - 180° -> SERVO_PWM_MAX (650) - extended maximum
+ */
+bool PCA9685_SetServoAngle(PCA9685_Handle_t *handle, uint8_t channel, float angle)
 {
-	float Value;
-	if (Angle < MIN_ANGLE)
-		Angle = MIN_ANGLE;
-	if (Angle > MAX_ANGLE)
-		Angle = MAX_ANGLE;
+	if (handle == NULL || !handle->ready || channel > 15)
+	{
+		return false;
+	}
 
-	Value = (Angle - MIN_ANGLE) * ((float)SERVO_MAX - (float)SERVO_MIN) / (MAX_ANGLE - MIN_ANGLE) + (float)SERVO_MIN;
+	// Limit angle to 0-180° range
+	if (angle < 0)
+		angle = 0;
+	if (angle > 180)
+		angle = 180;
 
-	return PCA9685_SetPin(Channel, (uint16_t)Value, 0);
+	// Linear interpolation for full 180° range
+	uint16_t pwm_range = SERVO_PWM_MAX - SERVO_PWM_MIN; // 650 - 100 = 550
+	uint16_t pwm_value = SERVO_PWM_MIN + (uint16_t)((angle / 180.0f) * pwm_range);
+
+	return PCA9685_SetPWM(handle, channel, pwm_value);
 }
-#endif
 
-PCA9685_STATUS PCA9685_Init(I2C_HandleTypeDef *hi2c)
+/**
+ * @brief Test function to find optimal PWM range for MG996R
+ * Use this to experiment with different PWM values
+ */
+bool PCA9685_TestPWMRange(PCA9685_Handle_t *handle, uint8_t channel, uint16_t pwm_min, uint16_t pwm_max)
 {
-	pca9685_i2c = hi2c;
+	if (handle == NULL || !handle->ready || channel > 15)
+	{
+		return false;
+	}
 
-	PCA9685_SoftwareReset();
-#ifdef PCA9685_SERVO_MODE
-	PCA9685_SetPwmFrequency(48);
-#else
-	PCA9685_SetPwmFrequency(1000);
-#endif
-	PCA9685_AutoIncrement(1);
+	// Test minimum position
+	PCA9685_SetPWM(handle, channel, pwm_min);
+	HAL_Delay(2000);
 
-	return PCA9685_OK;
+	// Test center position
+	uint16_t pwm_mid = pwm_min + ((pwm_max - pwm_min) / 2);
+	PCA9685_SetPWM(handle, channel, pwm_mid);
+	HAL_Delay(2000);
+
+	// Test maximum position
+	PCA9685_SetPWM(handle, channel, pwm_max);
+	HAL_Delay(2000);
+
+	return true;
+}
+
+/**
+ * @brief Set raw PWM value - uses EXACT working register write sequence
+ *
+ * This function replicates the proven manual I2C commands that made servo move:
+ * HAL_I2C_Mem_Write(&hi2c1, 0x80, 0x06, 1, (uint8_t[]){0, 0, pwm_low, pwm_high}, 4, 1000);
+ *
+ * Each channel uses 4 registers: ON_L, ON_H, OFF_L, OFF_H
+ * - ON = 0 (PWM starts at beginning of cycle)
+ * - OFF = pwm_value (PWM ends after pwm_value steps)
+ */
+bool PCA9685_SetPWM(PCA9685_Handle_t *handle, uint8_t channel, uint16_t pwm_value)
+{
+	if (handle == NULL || !handle->ready || channel > 15)
+	{
+		return false;
+	}
+
+	// Limit PWM to 12-bit maximum
+	if (pwm_value > 4095)
+	{
+		pwm_value = 4095;
+	}
+
+	// Calculate base register for this channel
+	// Channel 0 = 0x06, Channel 1 = 0x0A, etc. (each channel uses 4 registers)
+	uint8_t base_reg = PCA9685_LED0_ON_L + (4 * channel);
+
+	// Prepare PWM data exactly like the working manual commands:
+	// [ON_L, ON_H, OFF_L, OFF_H] = [0, 0, pwm_low, pwm_high]
+	uint8_t pwm_data[4] = {
+		0x00,					// ON_L: Low byte of ON time (0)
+		0x00,					// ON_H: High byte of ON time (0)
+		pwm_value & 0xFF,		// OFF_L: Low byte of OFF time
+		(pwm_value >> 8) & 0xFF // OFF_H: High byte of OFF time
+	};
+
+	// Write all 4 registers in one transaction (auto-increment enabled)
+	// This replicates: HAL_I2C_Mem_Write(&hi2c1, address<<1, base_reg, 1, pwm_data, 4, 1000)
+	if (HAL_I2C_Mem_Write(handle->hi2c, handle->address << 1, base_reg, 1, pwm_data, 4, 1000) != HAL_OK)
+	{
+		return false;
+	}
+
+	return true;
+}
+
+/**
+ * @brief Turn off PWM channel completely
+ * Sets PWM value to 0 (no pulse output)
+ */
+bool PCA9685_SetChannelOff(PCA9685_Handle_t *handle, uint8_t channel)
+{
+	if (handle == NULL || !handle->ready || channel > 15)
+	{
+		return false;
+	}
+
+	// Set PWM to 0 (no pulse)
+	return PCA9685_SetPWM(handle, channel, 0);
 }

@@ -1,0 +1,52 @@
+/*
+ * hexapod_kinematics.h - Header dla kinematyki hexapoda
+ *
+ * TYLKO DEKLARACJE KINEMATYKI - bez testów!
+ */
+
+#ifndef HEXAPOD_KINEMATICS_H
+#define HEXAPOD_KINEMATICS_H
+
+#include <stdint.h>
+#include <stdbool.h>
+#include <stdio.h>
+
+// Struktura dla pozycji 3D
+typedef struct
+{
+    float x;
+    float y;
+    float z;
+} Position3D_t;
+
+// Struktura dla kątów stawów
+typedef struct
+{
+    float hip;   // Kąt biodra [rad]
+    float knee;  // Kąt kolana [rad]
+    float ankle; // Kąt kostki [rad]
+} JointAngles_t;
+
+// Wymiary nóg hexapoda [cm]
+extern const float L1; // Hip do knee (5.8cm)
+extern const float L2; // Knee do ankle (10.5cm)
+extern const float L3; // Ankle do końca stopy (20.5cm)
+
+// Pozycje bazowe dla wszystkich 6 nóg
+extern const Position3D_t base_standing_positions[6];
+
+// FUNKCJE KINEMATYKI
+bool isPositionReachable(uint8_t leg_number, Position3D_t position);
+bool computeLegIK(uint8_t leg_number, Position3D_t target_position, JointAngles_t *angles);
+float convertToServoAngle(float joint_angle_rad, uint8_t joint_type, uint8_t leg_number);
+
+// Funkcje debugowania
+void debugLegIK(uint8_t leg_number, Position3D_t position, JointAngles_t angles);
+
+// Forward kinematics (opcjonalne)
+Position3D_t computeForwardKinematics(uint8_t leg_number, JointAngles_t angles);
+
+// Funkcje testowe
+void testAllBasePositions(void);
+
+#endif // HEXAPOD_KINEMATICS_H

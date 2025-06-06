@@ -19,12 +19,17 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "i2c.h"
+#include "usart.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
 #include "pca9685.h"
+#include "hexapod_kinematics.h"
+#include "test_positions.h"
+#include <stdio.h>
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -45,6 +50,8 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+
+PCA9685_Handle_t pca1;
 
 /* USER CODE END PV */
 
@@ -90,51 +97,17 @@ int main(void)
   MX_GPIO_Init();
   MX_I2C1_Init();
   MX_I2C2_Init();
+  MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
-  // Test podstawowy - mrugaj 3 razy że dotarliśmy tutaj
-  for (int i = 0; i < 3; i++)
+  if (!PCA9685_Init(&pca1, &hi2c1, PCA9685_ADDRESS_1))
   {
-    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
-    HAL_Delay(200);
-    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
-    HAL_Delay(200);
-  }
-
-  // Test I2C przed inicjalizacją
-  HAL_StatusTypeDef i2c_test = HAL_I2C_IsDeviceReady(&hi2c1, 0x80, 3, 1000);
-  if (i2c_test != HAL_OK)
-  {
-    // I2C problem - bardzo szybkie miganie
     while (1)
     {
-      HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
-      HAL_Delay(50);
-      HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
+      HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5); // Toggle LED to indicate error
       HAL_Delay(50);
     }
   }
-
-  // Inicjalizacja PCA9685
-  if (PCA9685_Init(&hi2c1) != PCA9685_OK)
-  {
-    // PCA Init problem - średnie miganie
-    while (1)
-    {
-      HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
-      HAL_Delay(300);
-      HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
-      HAL_Delay(300);
-    }
-  }
-
-  // Jeśli dotarliśmy tutaj - wszystko OK
-  // Długie światło na 2 sekundy
-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
-  HAL_Delay(2000);
-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
-
-  PCA9685_SetPwmFrequency(50);
 
   /* USER CODE END 2 */
 
@@ -143,23 +116,11 @@ int main(void)
   while (1)
   {
 
-    PCA9685_SetServoAngle(0, 0.0); // 0 stopni
-    HAL_Delay(1000);
-
-    PCA9685_SetServoAngle(0, 90.0); // 90 stopni
-    HAL_Delay(1000);
-
-    PCA9685_SetServoAngle(0, 180.0); // 180 stopni
-    HAL_Delay(1000);
-
-    PCA9685_SetServoAngle(0, 90.0); // Powrót do środka
-    HAL_Delay(1000);
-
-    // Mrugaj LED żeby wiedzieć że kod działa
-    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
-    HAL_Delay(100);
-    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
-    HAL_Delay(100);
+    while (1)
+    {
+      // Test różnych offsetów kostki
+      fullLegDiagnostics(&pca1, 3);
+    }
 
     /* USER CODE END WHILE */
 
@@ -222,6 +183,12 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
+
+int _write(int file, char *ptr, int len)
+{
+  HAL_UART_Transmit(&huart2, (uint8_t *)ptr, len, HAL_MAX_DELAY);
+  return len;
+}
 
 /* USER CODE END 4 */
 
