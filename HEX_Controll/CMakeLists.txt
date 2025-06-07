@@ -52,6 +52,7 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
         Core/Src/hexapod_kinematics.c
         Core/Src/test_positions.c
         Core/Src/step_functions.c
+        Core/Src/tripod_gait.c
 )
 
 # Add include paths

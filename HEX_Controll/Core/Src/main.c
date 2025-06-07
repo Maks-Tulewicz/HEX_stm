@@ -29,6 +29,7 @@
 #include "hexapod_kinematics.h"
 #include "test_positions.h"
 #include "step_functions.h"
+#include "tripod_gait.h"
 #include <stdio.h>
 
 /* USER CODE END Includes */
@@ -121,11 +122,23 @@ int main(void)
     {
 
       // W main loop:
-      printf("=== TEST KROKÓW NOGI 3 ===\n");
+      // printf("=== TEST KROKÓW NOGI 3 ===\n");
 
       // Test z domyślnymi parametrami
-      testDefaultStep(&pca1, 3);
-      HAL_Delay(2000); // Czekaj 2 sekundy między testami
+      //  testDefaultStep(&pca1, 3);
+      // HAL_Delay(2000); // Czekaj 2 sekundy między testami
+
+      // Test z jedną nogą (noga 3):
+      printTripodConfig();                            // Pokaż ustawienia
+      tripodGaitCycle(&pca1, NULL, TRIPOD_FORWARD);   // Jeden cykl
+      tripodGaitWalk(&pca1, NULL, TRIPOD_FORWARD, 5); // 5 cykli
+
+      // Zmiana parametrów:
+      setTripodConfig(8.0f, 3.0f, 3, 3, 100, 50); // Jeszcze szybciej!
+
+      // Różne kierunki:
+      TRIPOD_WALK_FORWARD(&pca1, NULL, 3);              // Makro
+      tripodGaitWalk(&pca1, NULL, TRIPOD_TURN_LEFT, 2); // Obrót
     }
 
     /* USER CODE END WHILE */

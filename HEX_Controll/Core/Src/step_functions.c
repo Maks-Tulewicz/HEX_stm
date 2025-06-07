@@ -204,8 +204,8 @@ bool testDefaultStep(PCA9685_Handle_t *pca, int leg_number)
     // Parametry zoptymalizowane dla początkowych testów
     const float STEP_LENGTH = 6.0f; // 6cm krok (bezpieczny)
     const float LIFT_HEIGHT = 4.0f; // 3cm podniesienie
-    const uint32_t DURATION = 50;   // 2 sekundy (powolny test)
-    const int POINTS = 200;         // 30 punktów (płynny ruch)
+    const uint32_t DURATION = 5;    // 2 sekundy (powolny test)
+    const int POINTS = 120;         // 30 punktów (płynny ruch)
 
     return testSingleStep(pca, leg_number, STEP_LENGTH, LIFT_HEIGHT, DURATION, POINTS);
 }
