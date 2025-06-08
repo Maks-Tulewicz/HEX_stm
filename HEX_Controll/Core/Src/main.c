@@ -143,14 +143,21 @@ int main(void)
       PCA9685_SetServoAngle(&pca1, 6, 90.0f); // Noga 5 HIP
       PCA9685_SetServoAngle(&pca2, 6, 90.0f); // Noga 6 HIP
 
-      // tripodGaitWalk(&pca1, &pca2, TRIPOD_FORWARD, 3);
+      // PCA9685_SetServoAngle(&pca1, 1, 90.0f); // Noga 1 HIP
+      // PCA9685_SetServoAngle(&pca2, 4, 90.0f); // Noga 2 HIP
+      // PCA9685_SetServoAngle(&pca1, 2, 90.0f); // Noga 3 HIP
+      // PCA9685_SetServoAngle(&pca2, 5, 90.0f); // Noga 4 HIP
+      // PCA9685_SetServoAngle(&pca1, 5, 90.0f); // Noga 5 HIP
+      // PCA9685_SetServoAngle(&pca2, 6, 90.0f); // Noga 6 HIP
+
+      tripodGaitWalk(&pca1, &pca2, TRIPOD_FORWARD, 3);
 
       // printBipedalConfig();
       // bipedalGaitCycle(&pca1, &pca2, BIPEDAL_FORWARD);
       // bipedalGaitWalk(&pca1, &pca2, BIPEDAL_FORWARD, 3);
       // W main loop:
       // printf("=== TEST KROKÓW NOGI 3 ===\n");
-      waveGaitWalk(&pca1, &pca2, WAVE_FORWARD, 3);
+      // waveGaitWalk(&pca1, &pca2, WAVE_FORWARD, 3);
 
       // Test z domyślnymi parametrami
       //  testDefaultStep(&pca1, 3);

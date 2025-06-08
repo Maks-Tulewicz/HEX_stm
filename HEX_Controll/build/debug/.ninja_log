@@ -66,3 +66,13 @@
 778	1025	1749404033750993440	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj	2a0b66db1c045cc5
 812	1080	1749404033804992913	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj	a459f2362dd421e9
 1080	1156	1749404033880992171	HEX_Controll.elf	6ee0fdfe3764fef8
+2	151	1749419880345709376	CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj	c0b54000539cc046
+151	225	1749419880418708645	HEX_Controll.elf	6ee0fdfe3764fef8
+1	146	1749419930604205166	CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj	c0b54000539cc046
+146	216	1749419930672204483	HEX_Controll.elf	6ee0fdfe3764fef8
+1	112	1749423583127881800	CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj	c0b54000539cc046
+112	186	1749423583200883110	HEX_Controll.elf	6ee0fdfe3764fef8
+1	138	1749424933611534789	CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj	3879022a531f2558
+1	152	1749424933624534835	CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj	a4758b7fcb7c178b
+1	167	1749424933640534893	CMakeFiles/HEX_Controll.dir/Core/Src/tripod_gait.c.obj	8e556e7c4f28073a
+168	239	1749424933711535148	HEX_Controll.elf	6ee0fdfe3764fef8

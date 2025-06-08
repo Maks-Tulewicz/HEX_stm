@@ -16,13 +16,13 @@
 #include <stdio.h>
 #include <math.h>
 
-// Konfiguracja bipedal gait
+// Konfiguracja bipedal gait - ULTRA SZYBKA
 BipedalConfig_t bipedal_config = {
     .step_length = 4.0f,       // Długość kroku [cm]
     .lift_height = 4.0f,       // Wysokość podniesienia [cm]
-    .step_duration_ms = 10,    // Czas swing jednej pary [ms]
-    .step_points = 50,         // Punkty interpolacji swing
-    .step_height_base = -26.0f // Bazowa wysokość stania [cm]
+    .step_duration_ms = 50,    // Czas swing jednej pary [ms] - BARDZO SZYBKO
+    .step_points = 20,         // Punkty interpolacji swing - DRASTYCZNIE MNIEJ
+    .step_height_base = -24.0f // Bazowa wysokość stania [cm]
 };
 
 // Pozycje bazowe nóg - z ROS
@@ -119,6 +119,13 @@ static void setLegJointsWithOffset(int leg_number, float q1, float q2, float q3,
     float knee_deg = q2 * 180.0f / M_PI;
     float ankle_deg = q3 * 180.0f / M_PI;
 
+    // INWERSJA KOLAN dla prawych nóg (2,4,6) - odwrócony montaż silników
+    if (!mapping->is_left_side)
+    {
+        knee_deg = -knee_deg;   // Prawe nogi: odwróć kolano
+        ankle_deg = -ankle_deg; // Prawe nogi: odwróć kostkę
+    }
+
     // Mapowanie na serwa
     float servo_hip = 90.0f + hip_deg;
     float servo_knee = 90.0f + knee_deg;
@@ -157,9 +164,12 @@ static bool executeSwingPhase(int pair_index, BipedalDirection_t direction,
 
     printf("SWING: nogi %d,%d | POZOSTAŁE: stoją bez ruchu\n", swing_leg1, swing_leg2);
 
+    // ADAPTACYJNY DELAY - może być 0ms dla maksymalnej prędkości
     uint32_t step_delay = bipedal_config.step_duration_ms / bipedal_config.step_points;
-    if (step_delay == 0)
-        step_delay = 1;
+    // NIE wymuszaj minimum 1ms - pozwól na 0ms dla ultra prędkości
+
+    printf("Swing delay: %lu ms/punkt (total: %d punktów = %lu ms)\n",
+           step_delay, bipedal_config.step_points, step_delay * bipedal_config.step_points);
 
     // === FAZA SWING ===
     for (int i = 0; i <= bipedal_config.step_points; i++)
@@ -221,7 +231,8 @@ static bool executeSwingPhase(int pair_index, BipedalDirection_t direction,
             }
         }
 
-        HAL_Delay(step_delay);
+        // USUŃ HAL_Delay dla maksymalnej prędkości!
+        // HAL_Delay(step_delay);  // ← WYŁĄCZONE!
     }
 
     return true;
@@ -235,10 +246,13 @@ static bool executeStanceShift(BipedalDirection_t direction,
 {
     printf("\n--- FAZA STANCE: Wszystkie nogi przesuwają się o 1/3 do tyłu ---\n");
 
-    int stance_points = 30;                     // Mniej punktów dla stance (szybsze)
-    uint32_t stance_delay = 10 / stance_points; // 100ms całkowity czas stance
-    if (stance_delay == 0)
-        stance_delay = 1;
+    // ULTRA SZYBKA STANCE - mniej punktów, szybszy delay
+    int stance_points = 10;                     // DRASTYCZNIE MNIEJ punktów
+    uint32_t stance_delay = 20 / stance_points; // 20ms całkowity czas stance (było 100ms)
+    // Pozwól na 0ms delay dla ultra prędkości
+
+    printf("Stance delay: %lu ms/punkt (total: %d punktów = %lu ms)\n",
+           stance_delay, stance_points, stance_delay * stance_points);
 
     float stance_shift = bipedal_config.step_length / 3.0f;
 
@@ -282,7 +296,8 @@ static bool executeStanceShift(BipedalDirection_t direction,
             }
         }
 
-        HAL_Delay(stance_delay);
+        // USUŃ HAL_Delay dla maksymalnej prędkości!
+        // HAL_Delay(stance_delay);  // ← WYŁĄCZONE!
     }
 
     return true;
@@ -304,7 +319,7 @@ static bool executePairStep(int pair_index, BipedalDirection_t direction,
         return false;
     }
 
-    HAL_Delay(50); // Krótka pauza między fazami
+    // HAL_Delay(10); // USUŃ dla maksymalnej prędkości!
 
     // FAZA 2: STANCE SHIFT dla wszystkich nóg
     bool stance_success = executeStanceShift(direction, pca1, pca2);
@@ -348,7 +363,7 @@ bool bipedalGaitCycle(PCA9685_Handle_t *pca1, PCA9685_Handle_t *pca2, BipedalDir
             return false;
         }
 
-        HAL_Delay(100); // Pauza między krokami
+        // HAL_Delay(20); // USUŃ dla maksymalnej prędkości!
     }
 
     // Sprawdź pozycje końcowe
@@ -389,7 +404,7 @@ bool bipedalGaitWalk(PCA9685_Handle_t *pca1, PCA9685_Handle_t *pca2,
             return false;
         }
 
-        HAL_Delay(200);
+        // HAL_Delay(50); // USUŃ dla maksymalnej prędkości!
     }
 
     printf("\n✅ BIPEDAL GAIT WALK ZAKOŃCZONY\n");
