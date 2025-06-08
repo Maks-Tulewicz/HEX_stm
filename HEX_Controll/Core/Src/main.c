@@ -31,6 +31,7 @@
 #include "step_functions.h"
 #include "tripod_gait.h"
 #include "bipedal_gait.h"
+#include "wave_gait.h"
 
 #include <stdio.h>
 
@@ -146,9 +147,10 @@ int main(void)
 
       // printBipedalConfig();
       // bipedalGaitCycle(&pca1, &pca2, BIPEDAL_FORWARD);
-      bipedalGaitWalk(&pca1, &pca2, BIPEDAL_FORWARD, 3);
+      // bipedalGaitWalk(&pca1, &pca2, BIPEDAL_FORWARD, 3);
       // W main loop:
       // printf("=== TEST KROKÓW NOGI 3 ===\n");
+      waveGaitWalk(&pca1, &pca2, WAVE_FORWARD, 3);
 
       // Test z domyślnymi parametrami
       //  testDefaultStep(&pca1, 3);

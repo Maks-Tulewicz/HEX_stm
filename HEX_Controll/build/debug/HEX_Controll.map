@@ -793,7 +793,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x2aa cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.obj
  .debug_macro   0x00000000      0x126 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.obj
  .debug_line    0x00000000      0x67c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.obj
- .debug_str     0x00000000    0xc4560 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.obj
+ .debug_str     0x00000000    0xc453d cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.obj
  .comment       0x00000000       0x44 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.obj
  .debug_frame   0x00000000       0x60 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.obj
  .ARM.attributes
@@ -1130,7 +1130,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x2aa cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
  .debug_macro   0x00000000      0x126 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
  .debug_line    0x00000000      0x9a6 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
- .debug_str     0x00000000    0xc436e cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
+ .debug_str     0x00000000    0xc434b cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
  .comment       0x00000000       0x44 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
  .debug_frame   0x00000000      0x274 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
  .ARM.attributes
@@ -1270,7 +1270,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x2aa cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
  .debug_macro   0x00000000      0x126 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
  .debug_line    0x00000000      0xaa6 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
- .debug_str     0x00000000    0xc4491 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
+ .debug_str     0x00000000    0xc446e cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
  .comment       0x00000000       0x44 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
  .debug_frame   0x00000000      0x334 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
  .ARM.attributes
@@ -1367,7 +1367,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x2aa cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj
  .debug_macro   0x00000000      0x126 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj
  .debug_line    0x00000000      0x644 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj
- .debug_str     0x00000000    0xc41cb cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj
+ .debug_str     0x00000000    0xc41a8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj
  .comment       0x00000000       0x44 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj
  .debug_frame   0x00000000       0xb0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj
  .ARM.attributes
@@ -1564,7 +1564,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x2aa cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj
  .debug_macro   0x00000000      0x126 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj
  .debug_line    0x00000000     0x126e cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj
- .debug_str     0x00000000    0xc4352 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj
+ .debug_str     0x00000000    0xc432f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj
  .comment       0x00000000       0x44 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj
  .debug_frame   0x00000000       0xac cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj
  .ARM.attributes
@@ -1692,7 +1692,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x2aa cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
  .debug_macro   0x00000000      0x126 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
  .debug_line    0x00000000      0xe5f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
- .debug_str     0x00000000    0xc4598 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+ .debug_str     0x00000000    0xc4575 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
  .comment       0x00000000       0x44 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
  .debug_frame   0x00000000      0x250 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
  .ARM.attributes
@@ -1822,7 +1822,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x2aa cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj
  .debug_macro   0x00000000      0x126 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj
  .debug_line    0x00000000      0x801 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj
- .debug_str     0x00000000    0xc43d9 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj
+ .debug_str     0x00000000    0xc43b6 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj
  .comment       0x00000000       0x44 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj
  .debug_frame   0x00000000      0x264 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj
  .ARM.attributes
@@ -2299,7 +2299,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x2aa cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj
  .debug_macro   0x00000000      0x126 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj
  .debug_line    0x00000000      0x8fb cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj
- .debug_str     0x00000000    0xc41f9 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj
+ .debug_str     0x00000000    0xc41d6 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj
  .comment       0x00000000       0x44 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj
  .debug_frame   0x00000000      0x174 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj
  .ARM.attributes
@@ -3449,7 +3449,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x126 CMakeFiles/HEX_Controll.dir/Core/Src/test_positions.c.obj
  .debug_macro   0x00000000       0x3a CMakeFiles/HEX_Controll.dir/Core/Src/test_positions.c.obj
  .debug_line    0x00000000      0x807 CMakeFiles/HEX_Controll.dir/Core/Src/test_positions.c.obj
- .debug_str     0x00000000    0xc8160 CMakeFiles/HEX_Controll.dir/Core/Src/test_positions.c.obj
+ .debug_str     0x00000000    0xc813d CMakeFiles/HEX_Controll.dir/Core/Src/test_positions.c.obj
  .comment       0x00000000       0x44 CMakeFiles/HEX_Controll.dir/Core/Src/test_positions.c.obj
  .debug_frame   0x00000000       0xc4 CMakeFiles/HEX_Controll.dir/Core/Src/test_positions.c.obj
  .ARM.attributes
@@ -3597,7 +3597,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x126 CMakeFiles/HEX_Controll.dir/Core/Src/step_functions.c.obj
  .debug_macro   0x00000000       0x3a CMakeFiles/HEX_Controll.dir/Core/Src/step_functions.c.obj
  .debug_line    0x00000000      0x8db CMakeFiles/HEX_Controll.dir/Core/Src/step_functions.c.obj
- .debug_str     0x00000000    0xc81e8 CMakeFiles/HEX_Controll.dir/Core/Src/step_functions.c.obj
+ .debug_str     0x00000000    0xc81c5 CMakeFiles/HEX_Controll.dir/Core/Src/step_functions.c.obj
  .comment       0x00000000       0x44 CMakeFiles/HEX_Controll.dir/Core/Src/step_functions.c.obj
  .debug_frame   0x00000000       0xe0 CMakeFiles/HEX_Controll.dir/Core/Src/step_functions.c.obj
  .ARM.attributes
@@ -3763,7 +3763,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x3a CMakeFiles/HEX_Controll.dir/Core/Src/tripod_gait.c.obj
  .debug_macro   0x00000000       0x2e CMakeFiles/HEX_Controll.dir/Core/Src/tripod_gait.c.obj
  .debug_line    0x00000000      0xbe8 CMakeFiles/HEX_Controll.dir/Core/Src/tripod_gait.c.obj
- .debug_str     0x00000000    0xc860c CMakeFiles/HEX_Controll.dir/Core/Src/tripod_gait.c.obj
+ .debug_str     0x00000000    0xc85e9 CMakeFiles/HEX_Controll.dir/Core/Src/tripod_gait.c.obj
  .comment       0x00000000       0x44 CMakeFiles/HEX_Controll.dir/Core/Src/tripod_gait.c.obj
  .debug_frame   0x00000000      0x1ac CMakeFiles/HEX_Controll.dir/Core/Src/tripod_gait.c.obj
  .ARM.attributes
@@ -3832,10 +3832,47 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
  .data          0x00000000        0x0 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
  .bss           0x00000000        0x0 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+ .data.bipedal_config
+                0x00000000       0x1c CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+ .rodata.base_positions
+                0x00000000       0x48 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+ .bss.leg_current_y
+                0x00000000       0x18 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+ .bss.positions_initialized
+                0x00000000        0x1 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+ .rodata.leg_pairs
+                0x00000000       0x18 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+ .rodata.leg_mapping
+                0x00000000       0x48 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+ .text.cubicInterpolation
+                0x00000000       0x64 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+ .text.lerp     0x00000000       0x3c CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+ .rodata        0x00000000      0x4ad CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+ .text.initializeLegPositions
+                0x00000000       0x58 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+ .text.setLegJointsWithOffset
+                0x00000000      0x214 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+ .text.executeSwingPhase
+                0x00000000      0x2b8 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+ .text.executeStanceShift
+                0x00000000      0x1b4 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+ .text.executePairStep
+                0x00000000       0x84 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+ .text.bipedalGaitCycle
+                0x00000000      0x17c CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+ .text.bipedalGaitWalk
+                0x00000000       0x98 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
  .text.setBipedalConfig
                 0x00000000       0x64 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
  .text.printBipedalConfig
                 0x00000000       0x94 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+ .debug_info    0x00000000      0xfc7 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+ .debug_abbrev  0x00000000      0x2da CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+ .debug_aranges
+                0x00000000       0x70 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+ .debug_rnglists
+                0x00000000       0x56 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+ .debug_macro   0x00000000      0x2e0 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
  .debug_macro   0x00000000      0xad8 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
  .debug_macro   0x00000000      0x29b CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
  .debug_macro   0x00000000       0x2e CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
@@ -3897,6 +3934,141 @@ Discarded input sections
  .debug_macro   0x00000000      0x170 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
  .debug_macro   0x00000000      0x19b CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
  .debug_macro   0x00000000       0x16 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+ .debug_line    0x00000000      0xb1a CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+ .debug_str     0x00000000    0xc844a CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+ .comment       0x00000000       0x44 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+ .debug_frame   0x00000000      0x1b4 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+ .ARM.attributes
+                0x00000000       0x34 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .group         0x00000000        0xc CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .text          0x00000000        0x0 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .data          0x00000000        0x0 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .bss           0x00000000        0x0 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .text.setWaveConfig
+                0x00000000       0x64 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .text.printWaveConfig
+                0x00000000       0xa8 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000      0xad8 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000      0x29b CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000       0x2e CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000       0x28 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000       0x22 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000       0x8e CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000       0x51 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000      0x103 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000       0x6a CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000      0x1df CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000       0x1c CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000       0x22 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000       0xfb CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000     0x1011 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000      0x11f CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000    0x1675e CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000       0x6d CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000     0x3693 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000      0x190 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000       0x5c CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000      0xca5 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000      0x9e9 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000      0x115 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000      0x1a0 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000       0xa5 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000      0x16d CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000      0x287 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000       0x5f CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000      0x236 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000      0x132 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000      0x29c CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000       0x2e CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000      0x1b5 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000       0x22 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000       0xd6 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000      0x127 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000       0xe8 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000       0x89 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000      0x2aa CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000      0x126 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000       0x22 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000       0x3a CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000       0x74 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000       0x2a CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000       0x3c CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000       0x34 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000       0x16 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000       0x3c CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000      0x370 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000       0x10 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000       0x16 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000       0x4a CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000       0x34 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000       0x10 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000       0x58 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000      0x1e5 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000       0x16 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000       0x16 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000      0x170 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000      0x19b CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_macro   0x00000000       0x16 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
  .text          0x00000000      0x254 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_muldf3.o)
  .data          0x00000000        0x0 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_muldf3.o)
  .bss           0x00000000        0x0 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_muldf3.o)
@@ -4064,6 +4236,7 @@ LOAD CMakeFiles/HEX_Controll.dir/Core/Src/test_positions.c.obj
 LOAD CMakeFiles/HEX_Controll.dir/Core/Src/step_functions.c.obj
 LOAD CMakeFiles/HEX_Controll.dir/Core/Src/tripod_gait.c.obj
 LOAD CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+LOAD CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
 START GROUP
 LOAD /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/libgcc.a
 LOAD /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a
@@ -4086,7 +4259,7 @@ LOAD /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eab
                 0x08000000                g_pfnVectors
                 0x080001c4                        . = ALIGN (0x4)
 
-.text           0x080001d0     0x7ca0
+.text           0x080001d0     0x7c54
                 0x080001d0                        . = ALIGN (0x4)
  *(.text)
  .text          0x080001d0       0x40 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
@@ -4624,202 +4797,201 @@ LOAD /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eab
                 0x08006850      0x4d0 CMakeFiles/HEX_Controll.dir/Core/Src/hexapod_kinematics.c.obj
                 0x08006850                computeLegIK
  .text.cubicInterpolation
-                0x08006d20       0x64 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
- .text.lerp     0x08006d84       0x3c CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+                0x08006d20       0x64 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .text.lerp     0x08006d84       0x3c CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
  .text.initializeLegPositions
-                0x08006dc0       0x58 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+                0x08006dc0       0x58 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
  .text.setLegJointsWithOffset
-                0x08006e18      0x214 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+                0x08006e18      0x214 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
  .text.executeSwingPhase
-                0x0800702c      0x2b8 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+                0x0800702c      0x25c CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
  .text.executeStanceShift
-                0x080072e4      0x1b4 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
- .text.executePairStep
-                0x08007498       0x84 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
- .text.bipedalGaitCycle
-                0x0800751c      0x17c CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
-                0x0800751c                bipedalGaitCycle
- .text.bipedalGaitWalk
-                0x08007698       0x98 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
-                0x08007698                bipedalGaitWalk
- .text.printf   0x08007730       0x24 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-printf.o)
-                0x08007730                printf
-                0x08007730                iprintf
- .text._puts_r  0x08007754       0xaa /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-puts.o)
-                0x08007754                _puts_r
- *fill*         0x080077fe        0x2 
- .text.puts     0x08007800       0x10 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-puts.o)
-                0x08007800                puts
- .text.__errno  0x08007810        0xc /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-errno.o)
-                0x08007810                __errno
- .text.acosf    0x0800781c       0x58 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-wf_acos.o)
-                0x0800781c                acosf
- .text.atan2f   0x08007874        0x4 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-wf_atan2.o)
-                0x08007874                atan2f
- .text.sqrtf    0x08007878       0x3c /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-wf_sqrt.o)
-                0x08007878                sqrtf
- .text.fabsf    0x080078b4        0xe /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-sf_fabs.o)
-                0x080078b4                fabsf
- *fill*         0x080078c2        0x2 
- .text.nanf     0x080078c4        0xc /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-sf_nan.o)
-                0x080078c4                nanf
- .text.fmaxf    0x080078d0       0x3a /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-sf_fmax.o)
-                0x080078d0                fmaxf
- .text.fminf    0x0800790a       0x3a /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-sf_fmin.o)
-                0x0800790a                fminf
+                0x08007288      0x1b4 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .text.executeLegStep
+                0x0800743c       0x84 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .text.waveGaitCycle
+                0x080074c0      0x18c CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+                0x080074c0                waveGaitCycle
+ .text.waveGaitWalk
+                0x0800764c       0x98 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+                0x0800764c                waveGaitWalk
+ .text.printf   0x080076e4       0x24 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-printf.o)
+                0x080076e4                printf
+                0x080076e4                iprintf
+ .text._puts_r  0x08007708       0xaa /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-puts.o)
+                0x08007708                _puts_r
+ *fill*         0x080077b2        0x2 
+ .text.puts     0x080077b4       0x10 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-puts.o)
+                0x080077b4                puts
+ .text.__errno  0x080077c4        0xc /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-errno.o)
+                0x080077c4                __errno
+ .text.acosf    0x080077d0       0x58 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-wf_acos.o)
+                0x080077d0                acosf
+ .text.atan2f   0x08007828        0x4 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-wf_atan2.o)
+                0x08007828                atan2f
+ .text.sqrtf    0x0800782c       0x3c /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-wf_sqrt.o)
+                0x0800782c                sqrtf
+ .text.fabsf    0x08007868        0xe /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-sf_fabs.o)
+                0x08007868                fabsf
+ *fill*         0x08007876        0x2 
+ .text.nanf     0x08007878        0xc /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-sf_nan.o)
+                0x08007878                nanf
+ .text.fmaxf    0x08007884       0x3a /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-sf_fmax.o)
+                0x08007884                fmaxf
+ .text.fminf    0x080078be       0x3a /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-sf_fmin.o)
+                0x080078be                fminf
  .text.__fpclassifyf
-                0x08007944       0x38 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-sf_fpclassify.o)
-                0x08007944                __fpclassifyf
+                0x080078f8       0x38 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-sf_fpclassify.o)
+                0x080078f8                __fpclassifyf
  .text.__ieee754_sqrtf
-                0x0800797c        0x6 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-ef_sqrt.o)
-                0x0800797c                __ieee754_sqrtf
- *fill*         0x08007982        0x2 
+                0x08007930        0x6 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-ef_sqrt.o)
+                0x08007930                __ieee754_sqrtf
+ *fill*         0x08007936        0x2 
  .text.__ieee754_acosf
-                0x08007984      0x1ec /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-ef_acos.o)
-                0x08007984                __ieee754_acosf
+                0x08007938      0x1ec /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-ef_acos.o)
+                0x08007938                __ieee754_acosf
  .text.__ieee754_atan2f
-                0x08007b70      0x140 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-ef_atan2.o)
-                0x08007b70                __ieee754_atan2f
- .text.atanf    0x08007cb0      0x1a8 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-sf_atan.o)
-                0x08007cb0                atanf
+                0x08007b24      0x140 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-ef_atan2.o)
+                0x08007b24                __ieee754_atan2f
+ .text.atanf    0x08007c64      0x1a8 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-sf_atan.o)
+                0x08007c64                atanf
  *(.glue_7)
- .glue_7        0x08007e58        0x0 linker stubs
+ .glue_7        0x08007e0c        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08007e58        0x0 linker stubs
+ .glue_7t       0x08007e0c        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x08007e58        0x0 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .eh_frame      0x08007e0c        0x0 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.init)
- .init          0x08007e58        0x4 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x08007e58                _init
- .init          0x08007e5c        0x8 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtn.o
+ .init          0x08007e0c        0x4 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x08007e0c                _init
+ .init          0x08007e10        0x8 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtn.o
  *(.fini)
- .fini          0x08007e64        0x4 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x08007e64                _fini
- .fini          0x08007e68        0x8 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtn.o
-                0x08007e70                        . = ALIGN (0x4)
-                0x08007e70                        _etext = .
+ .fini          0x08007e18        0x4 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x08007e18                _fini
+ .fini          0x08007e1c        0x8 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x08007e24                        . = ALIGN (0x4)
+                0x08007e24                        _etext = .
 
-.vfp11_veneer   0x08007e70        0x0
- .vfp11_veneer  0x08007e70        0x0 linker stubs
+.vfp11_veneer   0x08007e24        0x0
+ .vfp11_veneer  0x08007e24        0x0 linker stubs
 
-.v4_bx          0x08007e70        0x0
- .v4_bx         0x08007e70        0x0 linker stubs
+.v4_bx          0x08007e24        0x0
+ .v4_bx         0x08007e24        0x0 linker stubs
 
-.iplt           0x08007e70        0x0
- .iplt          0x08007e70        0x0 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.iplt           0x08007e24        0x0
+ .iplt          0x08007e24        0x0 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.rodata         0x08007e70      0xe74
-                0x08007e70                        . = ALIGN (0x4)
+.rodata         0x08007e28      0xecc
+                0x08007e28                        . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x08007e70      0x510 CMakeFiles/HEX_Controll.dir/Core/Src/hexapod_kinematics.c.obj
- .rodata        0x08008380      0x4ad CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+ .rodata        0x08007e28      0x510 CMakeFiles/HEX_Controll.dir/Core/Src/hexapod_kinematics.c.obj
+ .rodata        0x08008338      0x508 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
  *(.rodata*)
  .rodata._printf_float.str1.1
-                0x0800882d      0x171 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-nano-vfprintf_float.o)
+                0x08008840      0x171 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-nano-vfprintf_float.o)
                                  0x12 (size before relaxing)
  .rodata._printf_i.str1.1
-                0x0800899e       0x22 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-nano-vfprintf_i.o)
+                0x080089b1       0x22 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-nano-vfprintf_i.o)
  .rodata._dtoa_r.str1.1
-                0x0800899e       0x8f /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-dtoa.o)
+                0x080089b1       0x8f /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-dtoa.o)
  .rodata._Balloc.str1.1
-                0x0800899e       0x70 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-mprec.o)
+                0x080089b1       0x70 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-mprec.o)
  .rodata.__multadd.str1.1
-                0x0800899e       0x11 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-mprec.o)
- *fill*         0x0800899e        0x2 
- .rodata.p05.0  0x080089a0        0xc /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-mprec.o)
- *fill*         0x080089ac        0x4 
+                0x080089b1       0x11 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-mprec.o)
+ *fill*         0x080089b1        0x3 
+ .rodata.p05.0  0x080089b4        0xc /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-mprec.o)
  .rodata.__mprec_bigtens
-                0x080089b0       0x28 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-mprec.o)
-                0x080089b0                __mprec_bigtens
+                0x080089c0       0x28 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-mprec.o)
+                0x080089c0                __mprec_bigtens
  .rodata.__mprec_tens
-                0x080089d8       0xc8 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-mprec.o)
-                0x080089d8                __mprec_tens
+                0x080089e8       0xc8 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-mprec.o)
+                0x080089e8                __mprec_tens
  .rodata._setlocale_r.str1.1
-                0x08008aa0        0x9 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-locale.o)
+                0x08008ab0        0x9 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-locale.o)
  .rodata.str1.1
-                0x08008aa0        0x2 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-locale.o)
+                0x08008ab0        0x2 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-locale.o)
  .rodata.__assert_func.str1.1
-                0x08008aa0       0x3d /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-assert.o)
+                0x08008ab0       0x3d /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-assert.o)
  .rodata._ctype_
-                0x08008aa0      0x101 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-ctype_.o)
-                0x08008aa0                _ctype_
+                0x08008ab0      0x101 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-ctype_.o)
+                0x08008ab0                _ctype_
  .rodata._vfprintf_r.str1.1
-                0x08008ba1       0x11 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-nano-vfprintf.o)
- *fill*         0x08008ba1        0x3 
+                0x08008bb1       0x11 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-nano-vfprintf.o)
+ *fill*         0x08008bb1        0x3 
  .rodata.AHBPrescTable
-                0x08008ba4       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
-                0x08008ba4                AHBPrescTable
+                0x08008bb4       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
+                0x08008bb4                AHBPrescTable
  .rodata.APBPrescTable
-                0x08008bb4        0x8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
-                0x08008bb4                APBPrescTable
+                0x08008bc4        0x8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
+                0x08008bc4                APBPrescTable
  .rodata.leg_origins
-                0x08008bbc       0x48 CMakeFiles/HEX_Controll.dir/Core/Src/hexapod_kinematics.c.obj
-                0x08008bbc                leg_origins
+                0x08008bcc       0x48 CMakeFiles/HEX_Controll.dir/Core/Src/hexapod_kinematics.c.obj
+                0x08008bcc                leg_origins
  .rodata.base_positions
-                0x08008c04       0x48 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
- .rodata.leg_pairs
-                0x08008c4c       0x18 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+                0x08008c14       0x48 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .rodata.wave_sequence
+                0x08008c5c       0x18 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
  .rodata.leg_mapping
-                0x08008c64       0x48 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+                0x08008c74       0x48 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
  .rodata.acosf.str1.1
-                0x08008cac        0x1 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-wf_acos.o)
+                0x08008cbc        0x1 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-wf_acos.o)
  .rodata.CSWTCH.9
-                0x08008cac        0xc /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-ef_atan2.o)
+                0x08008cbc        0xc /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-ef_atan2.o)
  .rodata.CSWTCH.8
-                0x08008cb8        0xc /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-ef_atan2.o)
+                0x08008cc8        0xc /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-ef_atan2.o)
  .rodata.atanlo
-                0x08008cc4       0x10 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-sf_atan.o)
- .rodata.atanhi
                 0x08008cd4       0x10 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-sf_atan.o)
-                0x08008ce4                        . = ALIGN (0x4)
+ .rodata.atanhi
+                0x08008ce4       0x10 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-sf_atan.o)
+                0x08008cf4                        . = ALIGN (0x4)
 
-.ARM.extab      0x08008ce4        0x0
-                0x08008ce4                        . = ALIGN (0x4)
+.ARM.extab      0x08008cf4        0x0
+                0x08008cf4                        . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08008ce4                        . = ALIGN (0x4)
+                0x08008cf4                        . = ALIGN (0x4)
 
-.ARM            0x08008ce4        0x8
-                0x08008ce4                        . = ALIGN (0x4)
-                0x08008ce4                        __exidx_start = .
+.ARM            0x08008cf4        0x8
+                0x08008cf4                        . = ALIGN (0x4)
+                0x08008cf4                        __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x08008ce4        0x8 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memchr.o)
- .ARM.exidx     0x08008cec        0x0 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-strlen.o)
+ .ARM.exidx     0x08008cf4        0x8 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memchr.o)
+ .ARM.exidx     0x08008cfc        0x0 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-strlen.o)
                                   0x8 (size before relaxing)
- .ARM.exidx     0x08008cec        0x0 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/libgcc.a(_udivmoddi4.o)
+ .ARM.exidx     0x08008cfc        0x0 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/libgcc.a(_udivmoddi4.o)
                                   0x8 (size before relaxing)
-                0x08008cec                        __exidx_end = .
-                0x08008cec                        . = ALIGN (0x4)
+                0x08008cfc                        __exidx_end = .
+                0x08008cfc                        . = ALIGN (0x4)
 
-.preinit_array  0x08008cec        0x0
-                0x08008cec                        . = ALIGN (0x4)
-                0x08008cec                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x08008cfc        0x0
+                0x08008cfc                        . = ALIGN (0x4)
+                0x08008cfc                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x08008cec                        PROVIDE (__preinit_array_end = .)
-                0x08008cec                        . = ALIGN (0x4)
+                0x08008cfc                        PROVIDE (__preinit_array_end = .)
+                0x08008cfc                        . = ALIGN (0x4)
 
-.init_array     0x08008cec        0x4
-                0x08008cec                        . = ALIGN (0x4)
-                0x08008cec                        PROVIDE (__init_array_start = .)
+.init_array     0x08008cfc        0x4
+                0x08008cfc                        . = ALIGN (0x4)
+                0x08008cfc                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x08008cec        0x4 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x08008cf0                        PROVIDE (__init_array_end = .)
-                0x08008cf0                        . = ALIGN (0x4)
+ .init_array    0x08008cfc        0x4 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x08008d00                        PROVIDE (__init_array_end = .)
+                0x08008d00                        . = ALIGN (0x4)
 
-.fini_array     0x08008cf0        0x4
-                0x08008cf0                        . = ALIGN (0x4)
+.fini_array     0x08008d00        0x4
+                0x08008d00                        . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x08008cf0        0x4 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .fini_array    0x08008d00        0x4 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x08008cf4                        . = ALIGN (0x4)
-                0x08008cf4                        _sidata = LOADADDR (.data)
+                0x08008d04                        . = ALIGN (0x4)
+                0x08008d04                        _sidata = LOADADDR (.data)
 
-.rel.dyn        0x08008cf4        0x0
- .rel.iplt      0x08008cf4        0x0 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.rel.dyn        0x08008d04        0x0
+ .rel.iplt      0x08008d04        0x0 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.data           0x20000000      0x1f0 load address 0x08008cf4
+.data           0x20000000      0x1e8 load address 0x08008d04
                 0x20000000                        . = ALIGN (0x4)
                 0x20000000                        _sdata = .
  *(.data)
@@ -4845,79 +5017,79 @@ LOAD /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eab
                 0x200001d0        0x1 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
                 0x200001d0                uwTickFreq
  *fill*         0x200001d1        0x3 
- .data.bipedal_config
-                0x200001d4       0x1c CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
-                0x200001d4                bipedal_config
+ .data.wave_config
+                0x200001d4       0x14 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+                0x200001d4                wave_config
  *(.RamFunc)
  *(.RamFunc*)
-                0x200001f0                        . = ALIGN (0x4)
-                0x200001f0                        _edata = .
+                0x200001e8                        . = ALIGN (0x4)
+                0x200001e8                        _edata = .
 
-.igot.plt       0x200001f0        0x0 load address 0x08008ee4
- .igot.plt      0x200001f0        0x0 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x200001f0                        . = ALIGN (0x4)
+.igot.plt       0x200001e8        0x0 load address 0x08008eec
+ .igot.plt      0x200001e8        0x0 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x200001e8                        . = ALIGN (0x4)
 
-.bss            0x200001f0      0x28c load address 0x08008ee4
-                0x200001f0                        _sbss = .
-                0x200001f0                        __bss_start__ = _sbss
+.bss            0x200001e8      0x28c load address 0x08008eec
+                0x200001e8                        _sbss = .
+                0x200001e8                        __bss_start__ = _sbss
  *(.bss)
- .bss           0x200001f0       0x1c /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .bss           0x200001e8       0x1c /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.bss*)
- .bss.__sf      0x2000020c      0x138 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-findfp.o)
-                0x2000020c                __sf
+ .bss.__sf      0x20000204      0x138 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-findfp.o)
+                0x20000204                __sf
  .bss.__stdio_exit_handler
-                0x20000344        0x4 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-findfp.o)
-                0x20000344                __stdio_exit_handler
- .bss.errno     0x20000348        0x4 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-reent.o)
-                0x20000348                errno
+                0x2000033c        0x4 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-findfp.o)
+                0x2000033c                __stdio_exit_handler
+ .bss.errno     0x20000340        0x4 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-reent.o)
+                0x20000340                errno
  .bss.__lock___malloc_recursive_mutex
-                0x2000034c        0x1 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-lock.o)
-                0x2000034c                __lock___malloc_recursive_mutex
+                0x20000344        0x1 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-lock.o)
+                0x20000344                __lock___malloc_recursive_mutex
  .bss.__lock___sfp_recursive_mutex
-                0x2000034d        0x1 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-lock.o)
-                0x2000034d                __lock___sfp_recursive_mutex
- *fill*         0x2000034e        0x2 
+                0x20000345        0x1 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-lock.o)
+                0x20000345                __lock___sfp_recursive_mutex
+ *fill*         0x20000346        0x2 
  .bss.__malloc_sbrk_start
-                0x20000350        0x4 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-mallocr.o)
-                0x20000350                __malloc_sbrk_start
+                0x20000348        0x4 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-mallocr.o)
+                0x20000348                __malloc_sbrk_start
  .bss.__malloc_free_list
-                0x20000354        0x4 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-mallocr.o)
-                0x20000354                __malloc_free_list
- .bss.uwTick    0x20000358        0x4 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
-                0x20000358                uwTick
- .bss.pca1      0x2000035c        0x8 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
-                0x2000035c                pca1
- .bss.pca2      0x20000364        0x8 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
-                0x20000364                pca2
- .bss.hi2c1     0x2000036c       0x54 CMakeFiles/HEX_Controll.dir/Core/Src/i2c.c.obj
-                0x2000036c                hi2c1
- .bss.hi2c2     0x200003c0       0x54 CMakeFiles/HEX_Controll.dir/Core/Src/i2c.c.obj
-                0x200003c0                hi2c2
- .bss.huart2    0x20000414       0x48 CMakeFiles/HEX_Controll.dir/Core/Src/usart.c.obj
-                0x20000414                huart2
+                0x2000034c        0x4 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-mallocr.o)
+                0x2000034c                __malloc_free_list
+ .bss.uwTick    0x20000350        0x4 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+                0x20000350                uwTick
+ .bss.pca1      0x20000354        0x8 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
+                0x20000354                pca1
+ .bss.pca2      0x2000035c        0x8 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
+                0x2000035c                pca2
+ .bss.hi2c1     0x20000364       0x54 CMakeFiles/HEX_Controll.dir/Core/Src/i2c.c.obj
+                0x20000364                hi2c1
+ .bss.hi2c2     0x200003b8       0x54 CMakeFiles/HEX_Controll.dir/Core/Src/i2c.c.obj
+                0x200003b8                hi2c2
+ .bss.huart2    0x2000040c       0x48 CMakeFiles/HEX_Controll.dir/Core/Src/usart.c.obj
+                0x2000040c                huart2
  .bss.__sbrk_heap_end
-                0x2000045c        0x4 CMakeFiles/HEX_Controll.dir/Core/Src/sysmem.c.obj
+                0x20000454        0x4 CMakeFiles/HEX_Controll.dir/Core/Src/sysmem.c.obj
  .bss.leg_current_y
-                0x20000460       0x18 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+                0x20000458       0x18 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
  .bss.positions_initialized
-                0x20000478        0x1 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+                0x20000470        0x1 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
  *(COMMON)
-                0x2000047c                        . = ALIGN (0x4)
- *fill*         0x20000479        0x3 
-                0x2000047c                        _ebss = .
-                0x2000047c                        __bss_end__ = _ebss
+                0x20000474                        . = ALIGN (0x4)
+ *fill*         0x20000471        0x3 
+                0x20000474                        _ebss = .
+                0x20000474                        __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x2000047c      0x604 load address 0x08008ee4
-                0x20000480                        . = ALIGN (0x8)
- *fill*         0x2000047c        0x4 
+                0x20000474      0x604 load address 0x08008eec
+                0x20000478                        . = ALIGN (0x8)
+ *fill*         0x20000474        0x4 
                 [!provide]                        PROVIDE (end = .)
-                0x20000480                        PROVIDE (_end = .)
-                0x20000680                        . = (. + _Min_Heap_Size)
- *fill*         0x20000480      0x200 
-                0x20000a80                        . = (. + _Min_Stack_Size)
- *fill*         0x20000680      0x400 
-                0x20000a80                        . = ALIGN (0x8)
+                0x20000478                        PROVIDE (_end = .)
+                0x20000678                        . = (. + _Min_Heap_Size)
+ *fill*         0x20000478      0x200 
+                0x20000a78                        . = (. + _Min_Stack_Size)
+ *fill*         0x20000678      0x400 
+                0x20000a78                        . = ALIGN (0x8)
 
 /DISCARD/
  libc.a(*)
@@ -5060,7 +5232,7 @@ LOAD /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eab
  .ARM.attributes
                 0x00000c72       0x34 CMakeFiles/HEX_Controll.dir/Core/Src/hexapod_kinematics.c.obj
  .ARM.attributes
-                0x00000ca6       0x34 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+                0x00000ca6       0x34 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
  .ARM.attributes
                 0x00000cda       0x22 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_addsubdf3.o)
  .ARM.attributes
@@ -5109,7 +5281,7 @@ LOAD /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eab
  .comment       0x00000043       0x44 CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
  .comment       0x00000043       0x44 CMakeFiles/HEX_Controll.dir/Core/Src/pca9685.c.obj
  .comment       0x00000043       0x44 CMakeFiles/HEX_Controll.dir/Core/Src/hexapod_kinematics.c.obj
- .comment       0x00000043       0x44 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+ .comment       0x00000043       0x44 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
  .comment       0x00000043       0x44 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-printf.o)
  .comment       0x00000043       0x44 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-puts.o)
  .comment       0x00000043       0x44 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-errno.o)
@@ -5172,7 +5344,7 @@ LOAD /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eab
  .debug_frame   0x00003660      0x2ac CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
  .debug_frame   0x0000390c       0xcc CMakeFiles/HEX_Controll.dir/Core/Src/pca9685.c.obj
  .debug_frame   0x000039d8       0x94 CMakeFiles/HEX_Controll.dir/Core/Src/hexapod_kinematics.c.obj
- .debug_frame   0x00003a6c      0x1b4 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+ .debug_frame   0x00003a6c      0x1b4 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
  .debug_frame   0x00003c20       0xac /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_addsubdf3.o)
  .debug_frame   0x00003ccc       0x50 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_muldivdf3.o)
  .debug_frame   0x00003d1c       0xc4 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_cmpdf2.o)
@@ -5185,7 +5357,7 @@ LOAD /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eab
  .debug_frame   0x00003f14       0x3c /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-puts.o)
  .debug_frame   0x00003f50       0x20 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-errno.o)
 
-.debug_info     0x00000000     0xf778
+.debug_info     0x00000000     0xf6e5
  .debug_info    0x00000000      0x54a cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
  .debug_info    0x0000054a     0x2421 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
  .debug_info    0x0000296b      0x8ff cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
@@ -5206,10 +5378,10 @@ LOAD /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eab
  .debug_info    0x0000c222       0x30 CMakeFiles/HEX_Controll.dir/startup_stm32f446xx.s.obj
  .debug_info    0x0000c252      0x87e CMakeFiles/HEX_Controll.dir/Core/Src/pca9685.c.obj
  .debug_info    0x0000cad0      0x455 CMakeFiles/HEX_Controll.dir/Core/Src/hexapod_kinematics.c.obj
- .debug_info    0x0000cf25      0xfc7 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
- .debug_info    0x0000deec      0x841 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-printf.o)
- .debug_info    0x0000e72d      0x950 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-puts.o)
- .debug_info    0x0000f07d      0x6fb /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-errno.o)
+ .debug_info    0x0000cf25      0xf34 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_info    0x0000de59      0x841 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-printf.o)
+ .debug_info    0x0000e69a      0x950 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-puts.o)
+ .debug_info    0x0000efea      0x6fb /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-errno.o)
 
 .debug_abbrev   0x00000000     0x2c3c
  .debug_abbrev  0x00000000      0x11a cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
@@ -5232,7 +5404,7 @@ LOAD /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eab
  .debug_abbrev  0x00002009       0x24 CMakeFiles/HEX_Controll.dir/startup_stm32f446xx.s.obj
  .debug_abbrev  0x0000202d      0x19a CMakeFiles/HEX_Controll.dir/Core/Src/pca9685.c.obj
  .debug_abbrev  0x000021c7      0x17c CMakeFiles/HEX_Controll.dir/Core/Src/hexapod_kinematics.c.obj
- .debug_abbrev  0x00002343      0x2da CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+ .debug_abbrev  0x00002343      0x2da CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
  .debug_abbrev  0x0000261d      0x21a /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-printf.o)
  .debug_abbrev  0x00002837      0x2a7 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-puts.o)
  .debug_abbrev  0x00002ade      0x15e /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-errno.o)
@@ -5279,7 +5451,7 @@ LOAD /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eab
  .debug_aranges
                 0x00000b20       0x30 CMakeFiles/HEX_Controll.dir/Core/Src/hexapod_kinematics.c.obj
  .debug_aranges
-                0x00000b50       0x70 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+                0x00000b50       0x70 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
  .debug_aranges
                 0x00000bc0       0x28 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-printf.o)
  .debug_aranges
@@ -5330,7 +5502,7 @@ LOAD /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eab
  .debug_rnglists
                 0x00000896       0x22 CMakeFiles/HEX_Controll.dir/Core/Src/hexapod_kinematics.c.obj
  .debug_rnglists
-                0x000008b8       0x56 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+                0x000008b8       0x56 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
  .debug_rnglists
                 0x0000090e       0x19 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-printf.o)
  .debug_rnglists
@@ -5338,7 +5510,7 @@ LOAD /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eab
  .debug_rnglists
                 0x0000096b       0x13 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-errno.o)
 
-.debug_macro    0x00000000    0x233bf
+.debug_macro    0x00000000    0x233c9
  .debug_macro   0x00000000      0x1d3 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
  .debug_macro   0x000001d3      0xad8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
  .debug_macro   0x00000cab       0x2e cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
@@ -5388,71 +5560,71 @@ LOAD /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eab
  .debug_macro   0x0001fdcd      0x1d3 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
  .debug_macro   0x0001ffa0      0x233 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
  .debug_macro   0x000201d3      0x1d4 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
- .debug_macro   0x000203a7      0x335 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
- .debug_macro   0x000206dc       0x22 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
- .debug_macro   0x000206fe       0x3a CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
- .debug_macro   0x00020738       0x74 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
- .debug_macro   0x000207ac       0x2a CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
- .debug_macro   0x000207d6       0x3c CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
- .debug_macro   0x00020812       0x34 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
- .debug_macro   0x00020846       0x16 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
- .debug_macro   0x0002085c       0x3c CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
- .debug_macro   0x00020898      0x370 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
- .debug_macro   0x00020c08       0x10 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
- .debug_macro   0x00020c18       0x16 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
- .debug_macro   0x00020c2e       0x4a CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
- .debug_macro   0x00020c78       0x34 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
- .debug_macro   0x00020cac       0x10 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
- .debug_macro   0x00020cbc       0x58 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
- .debug_macro   0x00020d14      0x1e5 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
- .debug_macro   0x00020ef9       0x16 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
- .debug_macro   0x00020f0f       0x16 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
- .debug_macro   0x00020f25      0x170 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
- .debug_macro   0x00021095      0x19b CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
- .debug_macro   0x00021230       0x16 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
- .debug_macro   0x00021246       0x34 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
- .debug_macro   0x0002127a      0x1e7 CMakeFiles/HEX_Controll.dir/Core/Src/gpio.c.obj
- .debug_macro   0x00021461      0x1e7 CMakeFiles/HEX_Controll.dir/Core/Src/i2c.c.obj
- .debug_macro   0x00021648      0x1e7 CMakeFiles/HEX_Controll.dir/Core/Src/usart.c.obj
- .debug_macro   0x0002182f      0x1e7 CMakeFiles/HEX_Controll.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_macro   0x00021a16      0x1dd CMakeFiles/HEX_Controll.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_macro   0x00021bf3       0xff CMakeFiles/HEX_Controll.dir/Core/Src/sysmem.c.obj
- .debug_macro   0x00021cf2       0x10 CMakeFiles/HEX_Controll.dir/Core/Src/sysmem.c.obj
- .debug_macro   0x00021d02       0x6e CMakeFiles/HEX_Controll.dir/Core/Src/sysmem.c.obj
- .debug_macro   0x00021d70       0x94 CMakeFiles/HEX_Controll.dir/Core/Src/sysmem.c.obj
- .debug_macro   0x00021e04       0x57 CMakeFiles/HEX_Controll.dir/Core/Src/sysmem.c.obj
- .debug_macro   0x00021e5b      0x23c CMakeFiles/HEX_Controll.dir/Core/Src/sysmem.c.obj
- .debug_macro   0x00022097      0x265 CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
- .debug_macro   0x000222fc       0x10 CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
- .debug_macro   0x0002230c       0x10 CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
- .debug_macro   0x0002231c       0x10 CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
- .debug_macro   0x0002232c       0x10 CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
- .debug_macro   0x0002233c       0x1c CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
- .debug_macro   0x00022358       0x52 CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
- .debug_macro   0x000223aa       0x22 CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
- .debug_macro   0x000223cc       0x10 CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
- .debug_macro   0x000223dc       0x52 CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
- .debug_macro   0x0002242e       0xcf CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
- .debug_macro   0x000224fd       0x1c CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
- .debug_macro   0x00022519       0x3d CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
- .debug_macro   0x00022556       0x35 CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
- .debug_macro   0x0002258b      0x12c CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
- .debug_macro   0x000226b7       0x16 CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
- .debug_macro   0x000226cd       0x16 CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
- .debug_macro   0x000226e3       0x29 CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
- .debug_macro   0x0002270c      0x242 CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
- .debug_macro   0x0002294e       0x1c CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
- .debug_macro   0x0002296a       0x10 CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
- .debug_macro   0x0002297a      0x18a CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
- .debug_macro   0x00022b04       0x16 CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
- .debug_macro   0x00022b1a       0xce CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
- .debug_macro   0x00022be8      0x1eb CMakeFiles/HEX_Controll.dir/Core/Src/pca9685.c.obj
- .debug_macro   0x00022dd3      0x15c CMakeFiles/HEX_Controll.dir/Core/Src/hexapod_kinematics.c.obj
- .debug_macro   0x00022f2f       0x9e CMakeFiles/HEX_Controll.dir/Core/Src/hexapod_kinematics.c.obj
- .debug_macro   0x00022fcd      0x112 CMakeFiles/HEX_Controll.dir/Core/Src/hexapod_kinematics.c.obj
- .debug_macro   0x000230df      0x2e0 CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
+ .debug_macro   0x000203a7      0x33f CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
+ .debug_macro   0x000206e6       0x22 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
+ .debug_macro   0x00020708       0x3a CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
+ .debug_macro   0x00020742       0x74 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
+ .debug_macro   0x000207b6       0x2a CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
+ .debug_macro   0x000207e0       0x3c CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
+ .debug_macro   0x0002081c       0x34 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
+ .debug_macro   0x00020850       0x16 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
+ .debug_macro   0x00020866       0x3c CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
+ .debug_macro   0x000208a2      0x370 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
+ .debug_macro   0x00020c12       0x10 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
+ .debug_macro   0x00020c22       0x16 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
+ .debug_macro   0x00020c38       0x4a CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
+ .debug_macro   0x00020c82       0x34 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
+ .debug_macro   0x00020cb6       0x10 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
+ .debug_macro   0x00020cc6       0x58 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
+ .debug_macro   0x00020d1e      0x1e5 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
+ .debug_macro   0x00020f03       0x16 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
+ .debug_macro   0x00020f19       0x16 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
+ .debug_macro   0x00020f2f      0x170 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
+ .debug_macro   0x0002109f      0x19b CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
+ .debug_macro   0x0002123a       0x16 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
+ .debug_macro   0x00021250       0x34 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
+ .debug_macro   0x00021284      0x1e7 CMakeFiles/HEX_Controll.dir/Core/Src/gpio.c.obj
+ .debug_macro   0x0002146b      0x1e7 CMakeFiles/HEX_Controll.dir/Core/Src/i2c.c.obj
+ .debug_macro   0x00021652      0x1e7 CMakeFiles/HEX_Controll.dir/Core/Src/usart.c.obj
+ .debug_macro   0x00021839      0x1e7 CMakeFiles/HEX_Controll.dir/Core/Src/stm32f4xx_it.c.obj
+ .debug_macro   0x00021a20      0x1dd CMakeFiles/HEX_Controll.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_macro   0x00021bfd       0xff CMakeFiles/HEX_Controll.dir/Core/Src/sysmem.c.obj
+ .debug_macro   0x00021cfc       0x10 CMakeFiles/HEX_Controll.dir/Core/Src/sysmem.c.obj
+ .debug_macro   0x00021d0c       0x6e CMakeFiles/HEX_Controll.dir/Core/Src/sysmem.c.obj
+ .debug_macro   0x00021d7a       0x94 CMakeFiles/HEX_Controll.dir/Core/Src/sysmem.c.obj
+ .debug_macro   0x00021e0e       0x57 CMakeFiles/HEX_Controll.dir/Core/Src/sysmem.c.obj
+ .debug_macro   0x00021e65      0x23c CMakeFiles/HEX_Controll.dir/Core/Src/sysmem.c.obj
+ .debug_macro   0x000220a1      0x265 CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
+ .debug_macro   0x00022306       0x10 CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
+ .debug_macro   0x00022316       0x10 CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
+ .debug_macro   0x00022326       0x10 CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
+ .debug_macro   0x00022336       0x10 CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
+ .debug_macro   0x00022346       0x1c CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
+ .debug_macro   0x00022362       0x52 CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
+ .debug_macro   0x000223b4       0x22 CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
+ .debug_macro   0x000223d6       0x10 CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
+ .debug_macro   0x000223e6       0x52 CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
+ .debug_macro   0x00022438       0xcf CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
+ .debug_macro   0x00022507       0x1c CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
+ .debug_macro   0x00022523       0x3d CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
+ .debug_macro   0x00022560       0x35 CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
+ .debug_macro   0x00022595      0x12c CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
+ .debug_macro   0x000226c1       0x16 CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
+ .debug_macro   0x000226d7       0x16 CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
+ .debug_macro   0x000226ed       0x29 CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
+ .debug_macro   0x00022716      0x242 CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
+ .debug_macro   0x00022958       0x1c CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
+ .debug_macro   0x00022974       0x10 CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
+ .debug_macro   0x00022984      0x18a CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
+ .debug_macro   0x00022b0e       0x16 CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
+ .debug_macro   0x00022b24       0xce CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
+ .debug_macro   0x00022bf2      0x1eb CMakeFiles/HEX_Controll.dir/Core/Src/pca9685.c.obj
+ .debug_macro   0x00022ddd      0x15c CMakeFiles/HEX_Controll.dir/Core/Src/hexapod_kinematics.c.obj
+ .debug_macro   0x00022f39       0x9e CMakeFiles/HEX_Controll.dir/Core/Src/hexapod_kinematics.c.obj
+ .debug_macro   0x00022fd7      0x112 CMakeFiles/HEX_Controll.dir/Core/Src/hexapod_kinematics.c.obj
+ .debug_macro   0x000230e9      0x2e0 CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
 
-.debug_line     0x00000000     0xfd1f
+.debug_line     0x00000000     0xfcf5
  .debug_line    0x00000000      0x677 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
  .debug_line    0x00000677     0x39a0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
  .debug_line    0x00004017      0xd0c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
@@ -5462,48 +5634,48 @@ LOAD /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eab
  .debug_line    0x00007376      0xbc3 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
  .debug_line    0x00007f39      0x8f3 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
  .debug_line    0x0000882c     0x243b cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
- .debug_line    0x0000ac67      0x811 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
- .debug_line    0x0000b478      0x60f CMakeFiles/HEX_Controll.dir/Core/Src/gpio.c.obj
- .debug_line    0x0000ba87      0x6e1 CMakeFiles/HEX_Controll.dir/Core/Src/i2c.c.obj
- .debug_line    0x0000c168      0x66f CMakeFiles/HEX_Controll.dir/Core/Src/usart.c.obj
- .debug_line    0x0000c7d7      0x6b0 CMakeFiles/HEX_Controll.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_line    0x0000ce87      0x601 CMakeFiles/HEX_Controll.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_line    0x0000d488      0x2c2 CMakeFiles/HEX_Controll.dir/Core/Src/sysmem.c.obj
- .debug_line    0x0000d74a      0x5e6 CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
- .debug_line    0x0000dd30       0x7a CMakeFiles/HEX_Controll.dir/startup_stm32f446xx.s.obj
- .debug_line    0x0000ddaa      0x7a5 CMakeFiles/HEX_Controll.dir/Core/Src/pca9685.c.obj
- .debug_line    0x0000e54f      0x584 CMakeFiles/HEX_Controll.dir/Core/Src/hexapod_kinematics.c.obj
- .debug_line    0x0000ead3      0xb1a CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
- .debug_line    0x0000f5ed      0x259 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-printf.o)
- .debug_line    0x0000f846      0x354 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-puts.o)
- .debug_line    0x0000fb9a      0x185 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-errno.o)
+ .debug_line    0x0000ac67      0x822 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
+ .debug_line    0x0000b489      0x60f CMakeFiles/HEX_Controll.dir/Core/Src/gpio.c.obj
+ .debug_line    0x0000ba98      0x6e1 CMakeFiles/HEX_Controll.dir/Core/Src/i2c.c.obj
+ .debug_line    0x0000c179      0x66f CMakeFiles/HEX_Controll.dir/Core/Src/usart.c.obj
+ .debug_line    0x0000c7e8      0x6b0 CMakeFiles/HEX_Controll.dir/Core/Src/stm32f4xx_it.c.obj
+ .debug_line    0x0000ce98      0x601 CMakeFiles/HEX_Controll.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_line    0x0000d499      0x2c2 CMakeFiles/HEX_Controll.dir/Core/Src/sysmem.c.obj
+ .debug_line    0x0000d75b      0x5e6 CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
+ .debug_line    0x0000dd41       0x7a CMakeFiles/HEX_Controll.dir/startup_stm32f446xx.s.obj
+ .debug_line    0x0000ddbb      0x7a5 CMakeFiles/HEX_Controll.dir/Core/Src/pca9685.c.obj
+ .debug_line    0x0000e560      0x584 CMakeFiles/HEX_Controll.dir/Core/Src/hexapod_kinematics.c.obj
+ .debug_line    0x0000eae4      0xadf CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_line    0x0000f5c3      0x259 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-printf.o)
+ .debug_line    0x0000f81c      0x354 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-puts.o)
+ .debug_line    0x0000fb70      0x185 /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-errno.o)
 
-.debug_str      0x00000000    0xcdf00
- .debug_str     0x00000000    0xcdf00 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
-                              0xc41a3 (size before relaxing)
- .debug_str     0x000cdf00    0xc51a1 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
- .debug_str     0x000cdf00    0xc45dc cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
- .debug_str     0x000cdf00    0xc460f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
- .debug_str     0x000cdf00    0xc431e cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
- .debug_str     0x000cdf00    0xc437b cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
- .debug_str     0x000cdf00    0xc4abf cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
- .debug_str     0x000cdf00    0xc4d68 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
- .debug_str     0x000cdf00    0xc4b93 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
- .debug_str     0x000cdf00    0xc88ea CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
- .debug_str     0x000cdf00    0xc41be CMakeFiles/HEX_Controll.dir/Core/Src/gpio.c.obj
- .debug_str     0x000cdf00    0xc4705 CMakeFiles/HEX_Controll.dir/Core/Src/i2c.c.obj
- .debug_str     0x000cdf00    0xc467b CMakeFiles/HEX_Controll.dir/Core/Src/usart.c.obj
- .debug_str     0x000cdf00    0xc4054 CMakeFiles/HEX_Controll.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_str     0x000cdf00    0xc40f3 CMakeFiles/HEX_Controll.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_str     0x000cdf00     0x7188 CMakeFiles/HEX_Controll.dir/Core/Src/sysmem.c.obj
- .debug_str     0x000cdf00     0x948f CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
- .debug_str     0x000cdf00       0x8e CMakeFiles/HEX_Controll.dir/startup_stm32f446xx.s.obj
- .debug_str     0x000cdf00    0xc471a CMakeFiles/HEX_Controll.dir/Core/Src/pca9685.c.obj
- .debug_str     0x000cdf00     0x7d05 CMakeFiles/HEX_Controll.dir/Core/Src/hexapod_kinematics.c.obj
- .debug_str     0x000cdf00    0xc846d CMakeFiles/HEX_Controll.dir/Core/Src/bipedal_gait.c.obj
- .debug_str     0x000cdf00      0x56c /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-printf.o)
- .debug_str     0x000cdf00      0x5bc /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-puts.o)
- .debug_str     0x000cdf00      0x52b /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-errno.o)
+.debug_str      0x00000000    0xcde9e
+ .debug_str     0x00000000    0xcde9e cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
+                              0xc4180 (size before relaxing)
+ .debug_str     0x000cde9e    0xc517e cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
+ .debug_str     0x000cde9e    0xc45b9 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+ .debug_str     0x000cde9e    0xc45ec cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
+ .debug_str     0x000cde9e    0xc42fb cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+ .debug_str     0x000cde9e    0xc4358 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
+ .debug_str     0x000cde9e    0xc4a9c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+ .debug_str     0x000cde9e    0xc4d45 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+ .debug_str     0x000cde9e    0xc4b70 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+ .debug_str     0x000cde9e    0xc88c2 CMakeFiles/HEX_Controll.dir/Core/Src/main.c.obj
+ .debug_str     0x000cde9e    0xc419b CMakeFiles/HEX_Controll.dir/Core/Src/gpio.c.obj
+ .debug_str     0x000cde9e    0xc46e2 CMakeFiles/HEX_Controll.dir/Core/Src/i2c.c.obj
+ .debug_str     0x000cde9e    0xc4658 CMakeFiles/HEX_Controll.dir/Core/Src/usart.c.obj
+ .debug_str     0x000cde9e    0xc4031 CMakeFiles/HEX_Controll.dir/Core/Src/stm32f4xx_it.c.obj
+ .debug_str     0x000cde9e    0xc40d0 CMakeFiles/HEX_Controll.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_str     0x000cde9e     0x7165 CMakeFiles/HEX_Controll.dir/Core/Src/sysmem.c.obj
+ .debug_str     0x000cde9e     0x946c CMakeFiles/HEX_Controll.dir/Core/Src/syscalls.c.obj
+ .debug_str     0x000cde9e       0x8e CMakeFiles/HEX_Controll.dir/startup_stm32f446xx.s.obj
+ .debug_str     0x000cde9e    0xc46f7 CMakeFiles/HEX_Controll.dir/Core/Src/pca9685.c.obj
+ .debug_str     0x000cde9e     0x7ce2 CMakeFiles/HEX_Controll.dir/Core/Src/hexapod_kinematics.c.obj
+ .debug_str     0x000cde9e    0xc841e CMakeFiles/HEX_Controll.dir/Core/Src/wave_gait.c.obj
+ .debug_str     0x000cde9e      0x56c /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-printf.o)
+ .debug_str     0x000cde9e      0x5bc /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-puts.o)
+ .debug_str     0x000cde9e      0x52b /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-errno.o)
 
 .debug_line_str
                 0x00000000       0x72
