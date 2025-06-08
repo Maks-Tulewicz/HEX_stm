@@ -1,7 +1,5 @@
 /*
- * test_positions.h - Header dla testów i debugowania
- *
- * WSZYSTKIE DEKLARACJE FUNKCJI TESTOWYCH
+ * test_positions.h - Testy i kalibracja hexapoda
  */
 
 #ifndef TEST_POSITIONS_H
@@ -9,76 +7,13 @@
 
 #include "hexapod_kinematics.h"
 #include "pca9685.h"
-#include <math.h>
-#include <stdbool.h>
 
-// Struktura dla testowej pozycji z opisem
-typedef struct
-{
-    Position3D_t position;
-    const char *description;
-} TestPosition_t;
+// FUNKCJE KALIBRACJI
+void calibrationTest90Degrees(PCA9685_Handle_t *pca, int leg_number);
+void testStraightLegPosition(PCA9685_Handle_t *pca, int leg_number);
 
-// Struktura parametrów kroku
-typedef struct
-{
-    float step_length;     // Długość kroku [cm]
-    float step_height;     // Wysokość podniesienia [cm]
-    float step_duration;   // Czas trwania kroku [s]
-    Position3D_t base_pos; // Pozycja bazowa nogi
-} StepParams_t;
-
-// Tryby kroków
-typedef enum
-{
-    STEP_MODE_TEST,   // Test pojedynczej nogi - brak fazy stance
-    STEP_MODE_TRIPOD, // Tripod gait - szybka faza stance
-    STEP_MODE_WAVE,   // Wave gait - powolna faza stance
-    STEP_MODE_RETURN  // Powrót do pozycji bazowej
-} StepMode_t;
-
-// Zewnętrzne tablice z pozycjami testowymi
-extern const TestPosition_t test_positions[];
-extern const int num_test_positions;
-
-// Predefiniowane parametry kroków
-extern const StepParams_t default_step_params;
-extern const StepParams_t small_step_params;
-extern const StepParams_t large_step_params;
-
-// Funkcje pomocnicze
-float smoothStep(float x);
-float sinusoidalLift(float phase);
-
-// FUNKCJE TESTOWANIA OFFSETU KOSTKI
-void testDifferentAnkleOffsets(PCA9685_Handle_t *pca, uint8_t leg_number);
-void testAnkleOffset(PCA9685_Handle_t *pca, uint8_t leg_number, Position3D_t test_position);
-
-// FUNKCJE DIAGNOSTYCZNE
-void fullLegDiagnostics(PCA9685_Handle_t *pca, uint8_t leg_number);
-void debugCurrentLegPosition(PCA9685_Handle_t *pca, uint8_t leg_number);
-void checkServoOffsets(PCA9685_Handle_t *pca, uint8_t leg_number);
-void findGoodBasePosition(PCA9685_Handle_t *pca, uint8_t leg_number);
-
-// FUNKCJE TESTOWANIA POZYCJI
-void testAllPositions(PCA9685_Handle_t *pca);
-void testSinglePosition(PCA9685_Handle_t *pca, Position3D_t pos, const char *description);
-void demonstrateMovement(PCA9685_Handle_t *pca);
-
-// GŁÓWNE FUNKCJE TESTOWE
-void testLeg3StepLoop(PCA9685_Handle_t *pca);
-void testLeg3StepLoopAdvanced(PCA9685_Handle_t *pca, StepMode_t mode);
-
-// POZOSTAŁE FUNKCJE (przekierowane na diagnostykę)
-void testSingleStepLoop(PCA9685_Handle_t *pca, uint8_t leg_number);
-void executeForwardStep(PCA9685_Handle_t *pca, uint8_t leg_number, float step_length, float step_height);
-void executeBackwardStep(PCA9685_Handle_t *pca, uint8_t leg_number, float step_length, float step_height);
-void demonstrateSteps(PCA9685_Handle_t *pca, uint8_t leg_number);
-void executeWalkingSequence(PCA9685_Handle_t *pca, uint8_t leg_number, int num_steps);
-void testStepParameters(PCA9685_Handle_t *pca, uint8_t leg_number);
-void testCloserPositions(PCA9685_Handle_t *pca, uint8_t leg_number);
-
-// Makro do łatwego wywołania w main.c
-#define TEST_STEP_LOOP(pca, leg) testLeg3StepLoop(pca)
+// FUNKCJE POMOCNICZE
+void setLegJoints(PCA9685_Handle_t *pca, int leg_number, float q1, float q2, float q3);
+bool legIKToServos(int leg_number, float x, float y, float z, PCA9685_Handle_t *pca);
 
 #endif // TEST_POSITIONS_H

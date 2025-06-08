@@ -28,6 +28,8 @@
 #include "pca9685.h"
 #include "hexapod_kinematics.h"
 #include "test_positions.h"
+#include "step_functions.h"
+#include "tripod_gait.h"
 #include <stdio.h>
 
 /* USER CODE END Includes */
@@ -51,7 +53,7 @@
 
 /* USER CODE BEGIN PV */
 
-PCA9685_Handle_t pca1;
+PCA9685_Handle_t pca1, pca2;
 
 /* USER CODE END PV */
 
@@ -109,6 +111,15 @@ int main(void)
     }
   }
 
+  if (!PCA9685_Init(&pca2, &hi2c2, PCA9685_ADDRESS_1))
+  {
+    while (1)
+    {
+      HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5); // Toggle LED to indicate error
+      HAL_Delay(50);
+    }
+  }
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -118,8 +129,27 @@ int main(void)
 
     while (1)
     {
-      // Test różnych offsetów kostki
-      fullLegDiagnostics(&pca1, 3);
+
+      tripodGaitWalk(&pca1, &pca2, TRIPOD_FORWARD, 3);
+
+      // W main loop:
+      // printf("=== TEST KROKÓW NOGI 3 ===\n");
+
+      // Test z domyślnymi parametrami
+      //  testDefaultStep(&pca1, 3);
+      // HAL_Delay(2000); // Czekaj 2 sekundy między testami
+
+      // Test z jedną nogą (noga 3):
+      // printTripodConfig(); // Pokaż ustawienia
+      // tripodGaitCycle(&pca1, NULL, TRIPOD_FORWARD);   // Jeden cykl
+      // tripodGaitWalk(&pca1, NULL, TRIPOD_FORWARD, 5); // 5 cykli
+      // tripodGaitCycle(&pca1, NULL, TRIPOD_FORWARD);
+      //  // Zmiana parametrów:
+      //  setTripodConfig(8.0f, 3.0f, 3, 3, 100, 50); // Jeszcze szybciej!
+
+      // // Różne kierunki:
+      // TRIPOD_WALK_FORWARD(&pca1, NULL, 3);              // Makro
+      // tripodGaitWalk(&pca1, NULL, TRIPOD_TURN_LEFT, 2); // Obrót
     }
 
     /* USER CODE END WHILE */

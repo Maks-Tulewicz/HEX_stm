@@ -30,6 +30,8 @@
 #include "test_positions.h"
 #include "step_functions.h"
 #include "tripod_gait.h"
+#include "bipedal_gait.h"
+
 #include <stdio.h>
 
 /* USER CODE END Includes */
@@ -53,7 +55,7 @@
 
 /* USER CODE BEGIN PV */
 
-PCA9685_Handle_t pca1;
+PCA9685_Handle_t pca1, pca2;
 
 /* USER CODE END PV */
 
@@ -111,6 +113,15 @@ int main(void)
     }
   }
 
+  if (!PCA9685_Init(&pca2, &hi2c2, PCA9685_ADDRESS_1))
+  {
+    while (1)
+    {
+      HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5); // Toggle LED to indicate error
+      HAL_Delay(50);
+    }
+  }
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -121,6 +132,21 @@ int main(void)
     while (1)
     {
 
+      // testBasicPositions(&pca1, &pca2);
+
+      // Test wszystkich bioder na 90° (środek przedziału)
+      PCA9685_SetServoAngle(&pca1, 0, 90.0f); // Noga 1 HIP
+      PCA9685_SetServoAngle(&pca2, 0, 90.0f); // Noga 2 HIP
+      PCA9685_SetServoAngle(&pca1, 3, 90.0f); // Noga 3 HIP
+      PCA9685_SetServoAngle(&pca2, 3, 90.0f); // Noga 4 HIP
+      PCA9685_SetServoAngle(&pca1, 6, 90.0f); // Noga 5 HIP
+      PCA9685_SetServoAngle(&pca2, 6, 90.0f); // Noga 6 HIP
+
+      // tripodGaitWalk(&pca1, &pca2, TRIPOD_FORWARD, 3);
+
+      // printBipedalConfig();
+      // bipedalGaitCycle(&pca1, &pca2, BIPEDAL_FORWARD);
+      bipedalGaitWalk(&pca1, &pca2, BIPEDAL_FORWARD, 3);
       // W main loop:
       // printf("=== TEST KROKÓW NOGI 3 ===\n");
 
@@ -129,16 +155,16 @@ int main(void)
       // HAL_Delay(2000); // Czekaj 2 sekundy między testami
 
       // Test z jedną nogą (noga 3):
-      printTripodConfig();                            // Pokaż ustawienia
-      tripodGaitCycle(&pca1, NULL, TRIPOD_FORWARD);   // Jeden cykl
-      tripodGaitWalk(&pca1, NULL, TRIPOD_FORWARD, 5); // 5 cykli
+      // printTripodConfig(); // Pokaż ustawienia
+      // tripodGaitCycle(&pca1, NULL, TRIPOD_FORWARD);   // Jeden cykl
+      // tripodGaitWalk(&pca1, NULL, TRIPOD_FORWARD, 5); // 5 cykli
+      // tripodGaitCycle(&pca1, NULL, TRIPOD_FORWARD);
+      //  // Zmiana parametrów:
+      //  setTripodConfig(8.0f, 3.0f, 3, 3, 100, 50); // Jeszcze szybciej!
 
-      // Zmiana parametrów:
-      setTripodConfig(8.0f, 3.0f, 3, 3, 100, 50); // Jeszcze szybciej!
-
-      // Różne kierunki:
-      TRIPOD_WALK_FORWARD(&pca1, NULL, 3);              // Makro
-      tripodGaitWalk(&pca1, NULL, TRIPOD_TURN_LEFT, 2); // Obrót
+      // // Różne kierunki:
+      // TRIPOD_WALK_FORWARD(&pca1, NULL, 3);              // Makro
+      // tripodGaitWalk(&pca1, NULL, TRIPOD_TURN_LEFT, 2); // Obrót
     }
 
     /* USER CODE END WHILE */

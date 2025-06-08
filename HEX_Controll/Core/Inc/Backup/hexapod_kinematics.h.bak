@@ -1,7 +1,6 @@
 /*
- * hexapod_kinematics.h - Header dla kinematyki hexapoda
- *
- * TYLKO DEKLARACJE KINEMATYKI - bez testów!
+ * hexapod_kinematics.h - Kinematyka odwrotna hexapoda
+ * Bazuje na działającym kodzie ROS
  */
 
 #ifndef HEXAPOD_KINEMATICS_H
@@ -10,6 +9,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include <stdio.h>
+#include <math.h>
 
 // Struktura dla pozycji 3D
 typedef struct
@@ -22,31 +22,34 @@ typedef struct
 // Struktura dla kątów stawów
 typedef struct
 {
-    float hip;   // Kąt biodra [rad]
-    float knee;  // Kąt kolana [rad]
-    float ankle; // Kąt kostki [rad]
+    float hip;   // q1 - Kąt biodra [rad]
+    float knee;  // q2 - Kąt kolana [rad]
+    float ankle; // q3 - Kąt kostki [rad]
 } JointAngles_t;
 
-// Wymiary nóg hexapoda [cm]
-extern const float L1; // Hip do knee (5.8cm)
-extern const float L2; // Knee do ankle (10.5cm)
-extern const float L3; // Ankle do końca stopy (20.5cm)
+// Struktura origin nogi (z ROS)
+typedef struct
+{
+    float x;          // Pozycja X origin biodra
+    float y;          // Pozycja Y origin biodra
+    bool invert_hip;  // Czy odwracać kąt biodra
+    bool invert_knee; // Czy odwracać kąt kolana
+} LegOrigin_t;
 
-// Pozycje bazowe dla wszystkich 6 nóg
-extern const Position3D_t base_standing_positions[6];
+// Wymiary nóg hexapoda [cm] - z ROS
+#define L1 5.8f  // Hip do knee
+#define L2 10.5f // Knee do ankle
+#define L3 20.5f // Ankle do końca stopy
+
+// Origins nóg - z ROS, przeliczone na cm
+extern const LegOrigin_t leg_origins[6];
 
 // FUNKCJE KINEMATYKI
-bool isPositionReachable(uint8_t leg_number, Position3D_t position);
-bool computeLegIK(uint8_t leg_number, Position3D_t target_position, JointAngles_t *angles);
-float convertToServoAngle(float joint_angle_rad, uint8_t joint_type, uint8_t leg_number);
+bool computeLegIK(int leg_number, float x, float y, float z,
+                  float *q1, float *q2, float *q3);
 
-// Funkcje debugowania
-void debugLegIK(uint8_t leg_number, Position3D_t position, JointAngles_t angles);
+bool debugLegIK(int leg_number, float x, float y, float z);
 
-// Forward kinematics (opcjonalne)
-Position3D_t computeForwardKinematics(uint8_t leg_number, JointAngles_t angles);
-
-// Funkcje testowe
 void testAllBasePositions(void);
 
 #endif // HEXAPOD_KINEMATICS_H
