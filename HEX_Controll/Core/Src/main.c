@@ -69,6 +69,64 @@ void SystemClock_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+void setAllto90(PCA9685_Handle_t *pca1, PCA9685_Handle_t *pca2)
+{
+  // Test wszystkich bioder na 90° (środek przedziału)
+  PCA9685_SetServoAngle(pca1, 0, 90.0f); // Noga 1 HIP
+  PCA9685_SetServoAngle(pca2, 0, 90.0f); // Noga 2 HIP
+  PCA9685_SetServoAngle(pca1, 3, 90.0f); // Noga 3 HIP
+  PCA9685_SetServoAngle(pca2, 3, 90.0f); // Noga 4 HIP
+  PCA9685_SetServoAngle(pca1, 6, 90.0f); // Noga 5 HIP
+  PCA9685_SetServoAngle(pca2, 6, 90.0f); // Noga 6 HIP
+
+  HAL_Delay(1000); // Czekaj 1 sekundę, aby zobaczyć pozycje
+
+  PCA9685_SetServoAngle(pca1, 1, 90.0f); // Noga 1 HIP
+  PCA9685_SetServoAngle(pca2, 1, 90.0f); // Noga 2 HIP
+  PCA9685_SetServoAngle(pca1, 4, 90.0f); // Noga 3 HIP
+  PCA9685_SetServoAngle(pca2, 4, 90.0f); // Noga 4 HIP
+  PCA9685_SetServoAngle(pca1, 7, 90.0f); // Noga 5 HIP
+  PCA9685_SetServoAngle(pca2, 7, 90.0f); // Noga 6 HIP
+
+  HAL_Delay(1000); // Czekaj 1 sekundę, aby zobaczyć pozycje
+
+  PCA9685_SetServoAngle(pca1, 2, 90.0f); // Noga 1 HIP
+  PCA9685_SetServoAngle(pca2, 2, 90.0f); // Noga 2 HIP
+  PCA9685_SetServoAngle(pca1, 5, 90.0f); // Noga 3 HIP
+  PCA9685_SetServoAngle(pca2, 5, 90.0f); // Noga 4 HIP
+  PCA9685_SetServoAngle(pca1, 8, 90.0f); // Noga 5 HIP
+  PCA9685_SetServoAngle(pca2, 8, 90.0f); // Noga 6 HIP
+}
+
+void testStanding(PCA9685_Handle_t *pca1, PCA9685_Handle_t *pca2)
+{
+  // Test pozycji stojącej
+  PCA9685_SetServoAngle(pca1, 0, 90.0f); // Noga 1 HIP
+  PCA9685_SetServoAngle(pca2, 0, 90.0f); // Noga 2 HIP
+  PCA9685_SetServoAngle(pca1, 3, 90.0f); // Noga 3 HIP
+  PCA9685_SetServoAngle(pca2, 3, 90.0f); // Noga 4 HIP
+  PCA9685_SetServoAngle(pca1, 6, 90.0f); // Noga 5 HIP
+  PCA9685_SetServoAngle(pca2, 6, 90.0f); // Noga 6 HIP
+
+  HAL_Delay(1000); // Czekaj 1 sekundę, aby zobaczyć pozycje
+
+  PCA9685_SetServoAngle(pca1, 1, 60.0f); // Noga 1 HIP
+  PCA9685_SetServoAngle(pca2, 1, 60.0f); // Noga 2 HIP
+  PCA9685_SetServoAngle(pca1, 4, 60.0f); // Noga 3 HIP
+  PCA9685_SetServoAngle(pca2, 4, 60.0f); // Noga 4 HIP
+  PCA9685_SetServoAngle(pca1, 7, 60.0f); // Noga 5 HIP
+  PCA9685_SetServoAngle(pca2, 7, 60.0f); // Noga 6 HIP
+
+  HAL_Delay(1000); // Czekaj 1 sekundę, aby zobaczyć pozycje
+
+  PCA9685_SetServoAngle(pca1, 2, 5.0f); // Noga 1 HIP
+  PCA9685_SetServoAngle(pca2, 2, 5.0f); // Noga 2 HIP
+  PCA9685_SetServoAngle(pca1, 5, 5.0f); // Noga 3 HIP
+  PCA9685_SetServoAngle(pca2, 5, 5.0f); // Noga 4 HIP
+  PCA9685_SetServoAngle(pca1, 8, 5.0f); // Noga 5 HIP
+  PCA9685_SetServoAngle(pca2, 8, 5.0f); // Noga 6 HIP
+}
+
 /* USER CODE END 0 */
 
 /**
@@ -130,51 +188,18 @@ int main(void)
   while (1)
   {
 
-    while (1)
-    {
+    // testBasicPositions(&pca1, &pca2);
 
-      // testBasicPositions(&pca1, &pca2);
+    setAllto90(&pca1, &pca2);   // Ustaw wszystkie serwa na 90°
+    HAL_Delay(1000);            // Czekaj 1 sekundę, aby zobaczyć pozycje
+    testStanding(&pca1, &pca2); // Test pozycji stojącej
+    HAL_Delay(15000);           // Czekaj 1 sekundę, aby zobaczyć pozycje
 
-      // Test wszystkich bioder na 90° (środek przedziału)
-      PCA9685_SetServoAngle(&pca1, 0, 90.0f); // Noga 1 HIP
-      PCA9685_SetServoAngle(&pca2, 0, 90.0f); // Noga 2 HIP
-      PCA9685_SetServoAngle(&pca1, 3, 90.0f); // Noga 3 HIP
-      PCA9685_SetServoAngle(&pca2, 3, 90.0f); // Noga 4 HIP
-      PCA9685_SetServoAngle(&pca1, 6, 90.0f); // Noga 5 HIP
-      PCA9685_SetServoAngle(&pca2, 6, 90.0f); // Noga 6 HIP
+    // tripodGaitWalk(&pca1, &pca2, TRIPOD_FORWARD, 5);
+    // bipedalGaitWalk(&pca1, &pca2, BIPEDAL_FORWARD, 3);
+    // waveGaitWalk(&pca1, &pca2, WAVE_FORWARD, 3);
 
-      // PCA9685_SetServoAngle(&pca1, 1, 90.0f); // Noga 1 HIP
-      // PCA9685_SetServoAngle(&pca2, 4, 90.0f); // Noga 2 HIP
-      // PCA9685_SetServoAngle(&pca1, 2, 90.0f); // Noga 3 HIP
-      // PCA9685_SetServoAngle(&pca2, 5, 90.0f); // Noga 4 HIP
-      // PCA9685_SetServoAngle(&pca1, 5, 90.0f); // Noga 5 HIP
-      // PCA9685_SetServoAngle(&pca2, 6, 90.0f); // Noga 6 HIP
-
-      tripodGaitWalk(&pca1, &pca2, TRIPOD_FORWARD, 3);
-
-      // printBipedalConfig();
-      // bipedalGaitCycle(&pca1, &pca2, BIPEDAL_FORWARD);
-      // bipedalGaitWalk(&pca1, &pca2, BIPEDAL_FORWARD, 3);
-      // W main loop:
-      // printf("=== TEST KROKÓW NOGI 3 ===\n");
-      // waveGaitWalk(&pca1, &pca2, WAVE_FORWARD, 3);
-
-      // Test z domyślnymi parametrami
-      //  testDefaultStep(&pca1, 3);
-      // HAL_Delay(2000); // Czekaj 2 sekundy między testami
-
-      // Test z jedną nogą (noga 3):
-      // printTripodConfig(); // Pokaż ustawienia
-      // tripodGaitCycle(&pca1, NULL, TRIPOD_FORWARD);   // Jeden cykl
-      // tripodGaitWalk(&pca1, NULL, TRIPOD_FORWARD, 5); // 5 cykli
-      // tripodGaitCycle(&pca1, NULL, TRIPOD_FORWARD);
-      //  // Zmiana parametrów:
-      //  setTripodConfig(8.0f, 3.0f, 3, 3, 100, 50); // Jeszcze szybciej!
-
-      // // Różne kierunki:
-      // TRIPOD_WALK_FORWARD(&pca1, NULL, 3);              // Makro
-      // tripodGaitWalk(&pca1, NULL, TRIPOD_TURN_LEFT, 2); // Obrót
-    }
+    HAL_Delay(15000); // Czekaj 1 sekundę, aby zobaczyć pozycje
 
     /* USER CODE END WHILE */
 

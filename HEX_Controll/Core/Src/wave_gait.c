@@ -23,14 +23,14 @@ WaveConfig_t wave_config = {
     .step_height_base = -24.0f // Bazowa wysokość stania [cm]
 };
 
-// Pozycje bazowe nóg - z ROS
+// Pozycje bazowe nóg - PRZYBLIŻONE DO CIAŁA (zmniejszona dźwignia)
 static const float base_positions[6][3] = {
-    {18.0f, -15.0f, -24.0f},  // Noga 1 - lewa przednia
-    {-18.0f, -15.0f, -24.0f}, // Noga 2 - prawa przednia
-    {22.0f, 0.0f, -24.0f},    // Noga 3 - lewa środkowa
-    {-22.0f, 0.0f, -24.0f},   // Noga 4 - prawa środkowa
-    {18.0f, 15.0f, -24.0f},   // Noga 5 - lewa tylna
-    {-18.0f, 15.0f, -24.0f}   // Noga 6 - prawa tylna
+    {15.0f, -12.0f, -24.0f},  // Noga 1 - lewa przednia (było 18.0f, -15.0f)
+    {-15.0f, -12.0f, -24.0f}, // Noga 2 - prawa przednia (było -18.0f, -15.0f)
+    {18.0f, 0.0f, -24.0f},    // Noga 3 - lewa środkowa (było 22.0f, bez zmian Y)
+    {-18.0f, 0.0f, -24.0f},   // Noga 4 - prawa środkowa (było -22.0f, bez zmian Y)
+    {15.0f, 12.0f, -24.0f},   // Noga 5 - lewa tylna (było 18.0f, 15.0f)
+    {-15.0f, 12.0f, -24.0f}   // Noga 6 - prawa tylna (było -18.0f, 15.0f)
 };
 
 // Śledzenie aktualnych pozycji Y każdej nogi
@@ -113,12 +113,7 @@ static void setLegJointsWithOffset(int leg_number, float q1, float q2, float q3,
     float knee_deg = q2 * 180.0f / M_PI;
     float ankle_deg = q3 * 180.0f / M_PI;
 
-    // INWERSJA KOLAN dla prawych nóg (2,4,6) - odwrócony montaż silników
-    if (!mapping->is_left_side)
-    {
-        knee_deg = -knee_deg;   // Prawe nogi: odwróć kolano
-        ankle_deg = -ankle_deg; // Prawe nogi: odwróć kostkę
-    }
+    // USUNIĘTO INWERSJĘ KOLAN - wszystkie nogi mają ten sam kierunek
 
     // Mapowanie na serwa
     float servo_hip = 90.0f + hip_deg;

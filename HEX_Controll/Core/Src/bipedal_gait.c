@@ -119,12 +119,7 @@ static void setLegJointsWithOffset(int leg_number, float q1, float q2, float q3,
     float knee_deg = q2 * 180.0f / M_PI;
     float ankle_deg = q3 * 180.0f / M_PI;
 
-    // INWERSJA KOLAN dla prawych nóg (2,4,6) - odwrócony montaż silników
-    if (!mapping->is_left_side)
-    {
-        knee_deg = -knee_deg;   // Prawe nogi: odwróć kolano
-        ankle_deg = -ankle_deg; // Prawe nogi: odwróć kostkę
-    }
+    // USUNIĘTO INWERSJĘ KOLAN - wszystkie nogi mają ten sam kierunek
 
     // Mapowanie na serwa
     float servo_hip = 90.0f + hip_deg;
