@@ -5,7 +5,6 @@
 
 #include "hexapod_kinematics.h"
 
-// Origins nóg - z ROS, przeliczone na cm (x100)
 const LegOrigin_t leg_origins[6] = {
     {6.8956f, -7.7136f, false, false}, // Noga 1 - lewa przednia
     {-8.6608f, -7.7136f, true, true},  // Noga 2 - prawa przednia

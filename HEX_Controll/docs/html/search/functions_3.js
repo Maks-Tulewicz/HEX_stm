@@ -1,0 +1,7 @@
+var searchData=
+[
+  ['calculatetargetposition_0',['calculateTargetPosition',['../tripod__gait_8c.html#a7f6621c1ba892f82aecb5c962032c541',1,'tripod_gait.c']]],
+  ['calibrationtest90degrees_1',['calibrationtest90degrees',['../test__positions_8h.html#a62c4bb111ffd45311f89f30979b391c4',1,'calibrationTest90Degrees(PCA9685_Handle_t *pca, int leg_number):&#160;test_positions.c'],['../test__positions_8c.html#a62c4bb111ffd45311f89f30979b391c4',1,'calibrationTest90Degrees(PCA9685_Handle_t *pca, int leg_number):&#160;test_positions.c']]],
+  ['computelegik_2',['computelegik',['../group___kinematics___functions.html#gabe11d21c369df0af6ffcc0d6356e5bf4',1,'computeLegIK(int leg_number, float x, float y, float z, float *q1, float *q2, float *q3):&#160;hexapod_kinematics.c'],['../group___kinematics___functions.html#gabe11d21c369df0af6ffcc0d6356e5bf4',1,'computeLegIK(int leg_number, float x, float y, float z, float *q1, float *q2, float *q3):&#160;hexapod_kinematics.c']]],
+  ['cubicinterpolation_3',['cubicinterpolation',['../bipedal__gait_8c.html#aaf5488efbf23cd658531648894bba2c0',1,'cubicInterpolation(float t):&#160;bipedal_gait.c'],['../step__functions_8c.html#aaf5488efbf23cd658531648894bba2c0',1,'cubicInterpolation(float t):&#160;step_functions.c'],['../tripod__gait_8c.html#aaf5488efbf23cd658531648894bba2c0',1,'cubicInterpolation(float t):&#160;tripod_gait.c'],['../wave__gait_8c.html#aaf5488efbf23cd658531648894bba2c0',1,'cubicInterpolation(float t):&#160;wave_gait.c']]]
+];
