@@ -8,10 +8,10 @@
 
 A comprehensive hexapod robot control system featuring 18 DOF, dual I2C architecture, and three distinct walking gaits optimized for different performance characteristics.
 
-## 🎥 Demo Video
-*[Add link to YouTube demo video here]*
+![494859441_1119192829969747_5225182293932756698_n](https://github.com/user-attachments/assets/7e354689-5dd5-4ebb-bd17-253abfef4211)
 
 ## 📋 Table of Contents
+
 - [Features](#-features)
 - [Hardware Architecture](#-hardware-architecture)
 - [Gait Algorithms](#-gait-algorithms)
